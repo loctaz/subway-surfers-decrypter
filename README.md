@@ -1,42 +1,75 @@
-# Subway surfers JSON editor
+# Nuxt Minimal Starter
 
-An easy to use web-based Subway Surfers files decryptor & JSON editor.
+Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
-_Desktop_
-![Desktop preview](https://github.com/lea0o0oo/subwaySurfers-ezGUI/assets/50551069/38d8daf4-7f1c-48fa-bb25-55d8f81d0ce7)
+## Setup
 
-### Recommended IDE Setup
+Make sure to install dependencies:
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+```bash
+# npm
+npm install
 
-### Api reference
+# pnpm
+pnpm install
 
-You can easly encrypt / decrypt data by sending a POST request to a server, check the documentation for more information.
+# yarn
+yarn install
 
-[See api docs](https://github.com/Farfa7886/subwaySurfers-ezGUI/blob/main/server/README.md)
+# bun
+bun install
+```
 
-### Credits
+## Development Server
 
-- A huge appreciation goes out to [@moddedmcplayer](https://github.com/moddedmcplayer) for finding the decryption key. I subsequently created a web version of it.
-- Project leader [@Noobgamer0111](https://github.com/Noobgamer0111)
+Start the development server on `http://localhost:3000`:
 
-### Bug reporters
+```bash
+# npm
+npm run dev
 
-People that found bugs and reported them
+# pnpm
+pnpm dev
 
-- [matrigi](https://www.tiktok.com/@funtep)
-- SomethingGreen
+# yarn
+yarn dev
 
-#### Libraries
+# bun
+bun run dev
+```
 
-- [DaisyUI](https://daisyui.com/) - Components library
-- [TailwindCSS](https://tailwindcss.com/) - Styling
-- [PostCSS](https://www.npmjs.com/package/postcss)
-- [Autoprefixer](https://www.npmjs.com/package/autoprefixer)
-  ‎
-- [Vanilla JSON Editor](https://www.npmjs.com/package/vanilla-jsoneditor) - Advanced JSON editor
-- [CryptoJS](https://www.npmjs.com/package/crypto-js) - For encrypting / decrypting data
+## Production
 
-### Note
+Build the application for production:
 
-The UI for now is not one of the best, so If someone has some ideas it is possible to join the discord server: https://discord.gg/nghc84wjSZ
+```bash
+# npm
+npm run build
+
+# pnpm
+pnpm build
+
+# yarn
+yarn build
+
+# bun
+bun run build
+```
+
+Locally preview production build:
+
+```bash
+# npm
+npm run preview
+
+# pnpm
+pnpm preview
+
+# yarn
+yarn preview
+
+# bun
+bun run preview
+```
+
+Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
