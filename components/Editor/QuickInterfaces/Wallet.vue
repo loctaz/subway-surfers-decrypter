@@ -42,7 +42,9 @@ const interfaces = [
           class="font-semibold tracking-tight whitespace-nowrap"
           v-text="i.label"
         ></h4>
-        <div class="w-full flex justify-end items-center gap-3">
+        <div
+          class="w-full flex justify-end items-center gap-3 md:flex-nowrap flex-wrap"
+        >
           <span
             class="flex items-center gap-1 text-red-500"
             v-if="filesStore.files[filesStore.currentFileIndex!]!.content.decrypted[
