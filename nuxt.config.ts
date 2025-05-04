@@ -27,6 +27,7 @@ export default defineNuxtConfig({
     "@formkit/auto-animate",
     "@pinia/nuxt",
     "@vueuse/nuxt",
+    "@vite-pwa/nuxt",
   ],
 
   colorMode: {

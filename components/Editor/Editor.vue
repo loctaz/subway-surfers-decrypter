@@ -46,32 +46,34 @@ const isOpen = ref(false);
       </div>
     </div>
 
-    <Dialog v-if="isDesktop" v-model:open="isOpen">
-      <DialogContent class="sm:max-w-[425px]">
-        <DialogHeader>
-          <DialogTitle>Export file</DialogTitle>
-          <DialogDescription>
-            <EditorExport @close="isOpen = false" />
-          </DialogDescription>
-        </DialogHeader>
-      </DialogContent>
-    </Dialog>
+    <ClientOnly>
+      <Dialog v-if="isDesktop" v-model:open="isOpen">
+        <DialogContent class="sm:max-w-[425px]">
+          <DialogHeader>
+            <DialogTitle>Export file</DialogTitle>
+            <DialogDescription>
+              <EditorExport @close="isOpen = false" />
+            </DialogDescription>
+          </DialogHeader>
+        </DialogContent>
+      </Dialog>
 
-    <Drawer v-else v-model:open="isOpen">
-      <DrawerContent>
-        <DrawerHeader class="text-left">
-          <DrawerTitle>Export file</DrawerTitle>
-          <DrawerDescription>
-            <EditorExport @close="isOpen = false" />
-          </DrawerDescription>
-        </DrawerHeader>
-        <DrawerFooter class="pt-2">
-          <DrawerClose as-child>
-            <Button variant="outline"> Cancel </Button>
-          </DrawerClose>
-        </DrawerFooter>
-      </DrawerContent>
-    </Drawer>
+      <Drawer v-else v-model:open="isOpen">
+        <DrawerContent>
+          <DrawerHeader class="text-left">
+            <DrawerTitle>Export file</DrawerTitle>
+            <DrawerDescription>
+              <EditorExport @close="isOpen = false" />
+            </DrawerDescription>
+          </DrawerHeader>
+          <DrawerFooter class="pt-2">
+            <DrawerClose as-child>
+              <Button variant="outline"> Cancel </Button>
+            </DrawerClose>
+          </DrawerFooter>
+        </DrawerContent>
+      </Drawer>
+    </ClientOnly>
   </div>
 </template>
 
