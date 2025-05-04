@@ -197,6 +197,16 @@ const fileDetectors = [
       return filename;
   },
 
+  // season_hunts.json
+  (fileContent: Record<string, any>) => {
+    const filename = "season_hunts.json";
+    if (
+      fileContent["activeSeasonHuntModel"] &&
+      fileContent["activeSeasonHuntModel"]?.["currentTimeSlotId"]
+    )
+      return filename;
+  },
+
   // top_run.json
   (fileContent: Record<string, any>) => {
     const filename = "top_run.json";

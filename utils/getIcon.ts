@@ -25,6 +25,7 @@ const iconMap: Record<string, string> = {
   "rate_app.json": "lucide:star",
   //"rewarded_popups.json": "lucide:gift",
   "season_hunt.json": "lucide:crosshair",
+  "season_hunts.json": "lucide:crosshair",
   "top_run.json": "lucide:chart-network",
   "trophies.json": "lucide:trophy",
   "tutorials.json": "lucide:book",

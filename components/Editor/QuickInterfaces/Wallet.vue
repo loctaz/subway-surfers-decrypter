@@ -35,11 +35,11 @@ const interfaces = [
 <template>
   <div class="size-full flex flex-col gap-2">
     <Card v-for="(i, index) in interfaces" :key="index">
-      <CardContent class="flex items-center gap-4">
+      <CardContent class="flex items-center gap-4 flex-wrap md:flex-nowrap">
         <NuxtImg :src="i.img" class="size-8" />
 
         <h4
-          class="lg:text-xl text-sm font-semibold tracking-tight whitespace-nowrap"
+          class="font-semibold tracking-tight whitespace-nowrap"
           v-text="i.label"
         ></h4>
         <div class="w-full flex justify-end items-center gap-3">
@@ -54,7 +54,7 @@ const interfaces = [
           <NumberField
             :min="0"
             :max="2147483647"
-            class="max-w-[228px] w-full"
+            class="md:max-w-[228px] w-full"
             v-model="
             filesStore.files[filesStore.currentFileIndex!]!.content.decrypted[
               'currencies'
