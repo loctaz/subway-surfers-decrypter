@@ -26,6 +26,16 @@ watch(
   },
   { immediate: true }
 );
+
+watch(
+  () => editorValue.value,
+  (value) => {
+    if (filesStore.currentFile) {
+      filesStore.currentFile.content.decrypted =
+        typeof value == "string" ? JSON.parse(value) : value;
+    }
+  }
+);
 </script>
 
 <template>

@@ -33,7 +33,7 @@ const isOpen = ref(false);
       </TabsContent>
       <TabsContent value="quick_edit">
         <div class="size-full h-[calc(100vh-53px-24px-42px)]">
-          work in progress
+          <EditorQuickEditor />
         </div>
       </TabsContent>
     </Tabs>
