@@ -1,7 +1,12 @@
 <script setup lang="ts">
+import { inject } from "@vercel/analytics";
 import "vue-sonner/style.css";
 
 const { $pwa } = useNuxtApp();
+
+onMounted(() => {
+  inject(import.meta.env.VERCEL_ANALYTICS_ID);
+});
 </script>
 
 <template>

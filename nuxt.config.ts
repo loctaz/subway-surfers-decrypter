@@ -45,6 +45,10 @@ export default defineNuxtConfig({
           name: "description",
           content: "An online decrypter for Subway Surfers",
         },
+        {
+          name: "google-site-verification",
+          content: "jct2QYf3X1yQnSgoTAMycauSNDFSzCnZ6ZrypLzZw7o",
+        },
       ],
     },
   },
