@@ -37,6 +37,17 @@ export default defineNuxtConfig({
   colorMode: {
     classSuffix: "",
   },
+  app: {
+    head: {
+      title: "Subway Surfers Decrypter",
+      meta: [
+        {
+          name: "description",
+          content: "An online decrypter for Subway Surfers",
+        },
+      ],
+    },
+  },
 
   pwa: {
     manifest: {
@@ -53,6 +64,22 @@ export default defineNuxtConfig({
       display: "standalone",
       theme_color: "black",
       background_color: "black",
+    },
+    workbox: {
+      globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
+    },
+    injectManifest: {
+      globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
+    },
+    client: {
+      installPrompt: true,
+      periodicSyncForUpdates: 60 * 60 * 12, // 12 hours
+    },
+    devOptions: {
+      enabled: true,
+      navigateFallback: "/",
+      navigateFallbackAllowlist: [/^\/$/],
+      type: "module",
     },
   },
 });
