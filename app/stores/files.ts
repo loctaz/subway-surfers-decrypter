@@ -37,6 +37,7 @@ export const useFilesStore = defineStore("filesStore", {
       }
 
       this.reorderFilesAlphabetically();
+      this.selectedIndex = this.files.length - 1;
     },
     reorderFilesAlphabetically() {
       this.files.sort((a, b) => a.name.localeCompare(b.name));

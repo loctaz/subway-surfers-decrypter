@@ -22,7 +22,7 @@ import {
 } from "@/components/ui/drawer";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import exportUtil from "@/utils/export";
+import exportUtil from "~/utils/exportFile";
 import { toast } from "vue-sonner";
 
 // Reuse `form` section

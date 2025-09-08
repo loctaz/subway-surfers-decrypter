@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { useGlobalPaste } from "#imports";
 const filesStore = useFilesStore();
 const { isDragOver } = useGlobalDrop();
 useGlobalPaste();

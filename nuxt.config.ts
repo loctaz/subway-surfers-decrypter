@@ -42,7 +42,13 @@ export default defineNuxtConfig({
     manifest: {
       short_name: "SS Decryptor",
       name: "Subway Surfers Decryptor",
-      icons: [],
+      icons: [
+        {
+          src: "/icon.png",
+          sizes: "512x512",
+          type: "image/png",
+        },
+      ],
       start_url: "/",
       display: "standalone",
       theme_color: "black",
