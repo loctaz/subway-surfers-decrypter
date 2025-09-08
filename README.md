@@ -1,8 +1,10 @@
-# Subway surfer decryptor
+# Subway Surfers JSON editor & Decryptor
 
 An easy to use web-based Subway Surfers files decryptor & JSON editor.
 
-## Setup
+## Run locally
+
+### Setup
 
 Make sure to install dependencies:
 
@@ -11,7 +13,7 @@ Make sure to install dependencies:
 pnpm install
 ```
 
-## Development Server
+### Development Server
 
 Start the development server on `http://localhost:3000`:
 
@@ -20,13 +22,14 @@ Start the development server on `http://localhost:3000`:
 pnpm dev
 ```
 
-## Production
+### Production
 
 Build the application for production:
 
 ```bash
 # pnpm
 pnpm build
+
 ```
 
 Locally preview production build:
@@ -34,6 +37,9 @@ Locally preview production build:
 ```bash
 # pnpm
 pnpm preview
+
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.

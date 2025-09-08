@@ -2,11 +2,18 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  compatibilityDate: "2024-11-01",
+  compatibilityDate: "2025-07-15",
   devtools: { enabled: true },
-  future: {
-    compatibilityVersion: 4,
-  },
+  modules: [
+    "@nuxt/icon",
+    "shadcn-nuxt",
+    "@vueuse/nuxt",
+    "@nuxtjs/color-mode",
+    "@pinia/nuxt",
+    "@formkit/auto-animate",
+    "pinia-plugin-persistedstate",
+    "@vite-pwa/nuxt",
+  ],
 
   runtimeConfig: {
     public: {
@@ -17,28 +24,29 @@ export default defineNuxtConfig({
     },
   },
 
-  modules: [
-    "@nuxt/content",
-    "@nuxt/icon",
-    "@nuxt/fonts",
-    "@nuxt/image",
-    "shadcn-nuxt",
-    "@nuxtjs/color-mode",
-    "@formkit/auto-animate",
-    "@pinia/nuxt",
-    "@vueuse/nuxt",
-    "@vite-pwa/nuxt",
-  ],
-
-  colorMode: {
-    classSuffix: "",
-  },
   css: ["~/assets/css/tailwind.css"],
   vite: {
     plugins: [tailwindcss()],
   },
+
   shadcn: {
     prefix: "",
-    componentDir: "./components/ui",
+    componentDir: "./app/components/ui",
+  },
+
+  colorMode: {
+    classSuffix: "",
+  },
+
+  pwa: {
+    manifest: {
+      short_name: "SS Decryptor",
+      name: "Subway Surfers Decryptor",
+      icons: [],
+      start_url: "/",
+      display: "standalone",
+      theme_color: "black",
+      background_color: "black",
+    },
   },
 });

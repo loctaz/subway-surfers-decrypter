@@ -4,8 +4,8 @@
   "typescript": true,
   "tailwind": {
     "config": "",
-    "css": "assets/css/tailwind.css",
-    "baseColor": "stone",
+    "css": "app/assets/css/tailwind.css",
+    "baseColor": "neutral",
     "cssVariables": true,
     "prefix": ""
   },
