@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { inject } from "@vercel/analytics";
 import "vue-sonner/style.css";
+import { toast } from "vue-sonner";
 
 const { $pwa } = useNuxtApp();
 
@@ -29,7 +30,7 @@ onMounted(() => {
       </AlertDialogHeader>
       <AlertDialogFooter>
         <AlertDialogCancel>Cancel</AlertDialogCancel>
-        <AlertDialogAction @click="$pwa!.updateServiceWorker()"
+        <AlertDialogAction @click="$pwa?.updateServiceWorker()"
           >Update</AlertDialogAction
         >
       </AlertDialogFooter>

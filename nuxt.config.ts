@@ -53,10 +53,20 @@ export default defineNuxtConfig({
     },
   },
 
+  // nuxt.config.ts
   pwa: {
+    registerType: "autoUpdate",
     manifest: {
-      short_name: "SS Decryptor",
-      name: "Subway Surfers Decryptor",
+      id: "https://subway-surfers-decrypter.vercel.app",
+      name: "Subway Surfers Decrypter",
+      short_name: "SS Decrypter",
+      description: "Decrypt Subway Surfers files",
+      theme_color: "black",
+      background_color: "black",
+      lang: "en",
+      orientation: "portrait",
+      display: "standalone",
+      start_url: "/",
       icons: [
         {
           src: "/icon.png",
@@ -64,24 +74,16 @@ export default defineNuxtConfig({
           type: "image/png",
         },
       ],
-      start_url: "/",
-      display: "standalone",
-      theme_color: "black",
-      background_color: "black",
     },
     workbox: {
+      navigateFallback: "/",
       globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
-    },
-    injectManifest: {
-      globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
-    },
-    client: {
-      installPrompt: true,
-      periodicSyncForUpdates: 60 * 60 * 12, // 12 hours
+      runtimeCaching: [],
+      additionalManifestEntries: [{ url: "/", revision: "1" }],
     },
     devOptions: {
-      enabled: true,
-      navigateFallback: "/",
+      enabled: false,
+      suppressWarnings: true,
       navigateFallbackAllowlist: [/^\/$/],
       type: "module",
     },
