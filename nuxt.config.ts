@@ -79,7 +79,7 @@ export default defineNuxtConfig({
       navigateFallback: "/",
       globPatterns: ["**/*.{js,css,html,png,svg,ico}"],
       runtimeCaching: [],
-      additionalManifestEntries: [{ url: "/", revision: "1" }],
+      additionalManifestEntries: [{ url: "/", revision: "2" }],
     },
     devOptions: {
       enabled: false,
