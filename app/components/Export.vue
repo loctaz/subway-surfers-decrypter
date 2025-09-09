@@ -47,8 +47,33 @@ async function copy() {
   }
 }
 
-function saveFile() {
-  console.log("saveFile");
+async function saveFile() {
+  try {
+    const index = exportModal.state.value.fileIndex;
+    const result = await exportUtil(index);
+
+    const originalName = filesStore.files[index]?.name || "export.json";
+    const filename = originalName.toLowerCase().endsWith(".json")
+      ? originalName
+      : `${originalName}.json`;
+
+    const blob = new Blob([result], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const anchor = document.createElement("a");
+    anchor.href = url;
+    anchor.download = filename;
+    document.body.appendChild(anchor);
+    anchor.click();
+    anchor.remove();
+    URL.revokeObjectURL(url);
+
+    toast.success("Download started");
+  } catch (error) {
+    console.error(error);
+    toast.error(error instanceof Error ? error.message : "Failed to save file");
+  } finally {
+    exportModal.state.value.visible = false;
+  }
 }
 </script>
 

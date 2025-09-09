@@ -89,7 +89,9 @@ const siteUrl = useRequestURL().origin;
         </SidebarGroupContent>
       </SidebarGroup>
     </SidebarContent>
+
     <SidebarFooter>
+      <SidebarGroupLabel>Links</SidebarGroupLabel>
       <NuxtLink
         class="flex items-center gap-2 min-w-0 hover:bg-sidebar-accent px-2 py-1 rounded-md"
         to="https://subway.herrerde.xyz/"
