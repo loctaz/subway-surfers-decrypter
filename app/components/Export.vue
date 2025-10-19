@@ -108,7 +108,7 @@ async function saveFile() {
   <Dialog v-if="isDesktop" v-model:open="exportModal.state.value.visible">
     <DialogContent class="sm:max-w-[425px]">
       <DialogHeader>
-        <DialogTitle>Export</DialogTitle>
+        <DialogTitle>Exporter</DialogTitle>
         <DialogDescription>
           Exporter le fichier
           {{ filesStore.files[exportModal.state.value.fileIndex]!.name }}
