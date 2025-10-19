@@ -42,26 +42,37 @@ const siteUrl = useRequestURL().origin;
         <span class="truncate">{{ siteUrl }}</span>
       </span>
     </SidebarHeader>
+
     <SidebarContent>
       <SidebarGroup>
         <SidebarGroupLabel>Actions</SidebarGroupLabel>
-        <SidebarGroupContent> class="space-y-2">
-          <SidebarMenuButton @click="uploadFilesFromBtn" class="whitespace-nowrap">
-            ><Icon name="lucide:upload" /> Télécharger le(s) fichier(s)</SidebarMenuButton
+        <SidebarGroupContent>
+          <SidebarMenuButton @click="uploadFilesFromBtn">
+            <Icon name="lucide:upload" />
+            Télécharger le(s) fichier(s)
+          </SidebarMenuButton>
+
+          <!-- ✅ Correction ici -->
+          <SidebarMenuButton
+            @click="importFromPaste"
+            class="whitespace-nowrap"
           >
-          <SidebarMenuButton @click="importFromPaste" class="whitespace-nowrap">
-            ><Icon name="lucide:clipboard" /> Coller depuis le presse-papiers
-          </SidebarMenuButton
-          >
+            <Icon name="lucide:clipboard" />
+            Coller depuis le presse-papiers
+          </SidebarMenuButton>
+          <!-- ✅ Fin de la correction -->
         </SidebarGroupContent>
       </SidebarGroup>
 
       <SidebarGroup>
-        <SidebarGroupLabel v-if="filesStore.files.length > 0"
-          >Fichiers chargés</SidebarGroupLabel
-        >
+        <SidebarGroupLabel v-if="filesStore.files.length > 0">
+          Fichiers chargés
+        </SidebarGroupLabel>
         <SidebarGroupContent v-auto-animate>
-          <ContextMenu v-for="(file, index) in filesStore.files" :key="file.id">
+          <ContextMenu
+            v-for="(file, index) in filesStore.files"
+            :key="file.id"
+          >
             <ContextMenuTrigger>
               <SidebarMenuButton
                 class="flex items-center gap-2 min-w-0"
@@ -69,21 +80,23 @@ const siteUrl = useRequestURL().origin;
               >
                 <Icon :name="getIcon(file.name)" class="flex-shrink-0" />
                 <span class="truncate">{{ file.name }}</span>
-              </SidebarMenuButton></ContextMenuTrigger
-            >
+              </SidebarMenuButton>
+            </ContextMenuTrigger>
+
             <ContextMenuContent>
-              <ContextMenuLabel class="flex items-center gap-2"
-                ><Icon :name="getIcon(file.name)" class="flex-shrink-0" />
-                {{ file.name }}</ContextMenuLabel
-              >
-              <ContextMenuItem @click="exportModal.showModal(index)"
-                ><Icon name="lucide:download" /> Exporter</ContextMenuItem
-              >
+              <ContextMenuLabel class="flex items-center gap-2">
+                <Icon :name="getIcon(file.name)" class="flex-shrink-0" />
+                {{ file.name }}
+              </ContextMenuLabel>
+              <ContextMenuItem @click="exportModal.showModal(index)">
+                <Icon name="lucide:download" /> Exporter
+              </ContextMenuItem>
               <ContextMenuItem
                 class="text-red-600"
                 @click="filesStore.removeFile(index)"
-                ><Icon name="lucide:trash" /> Supprimer</ContextMenuItem
               >
+                <Icon name="lucide:trash" /> Supprimer
+              </ContextMenuItem>
             </ContextMenuContent>
           </ContextMenu>
         </SidebarGroupContent>
@@ -92,6 +105,7 @@ const siteUrl = useRequestURL().origin;
 
     <SidebarFooter>
       <SidebarGroupLabel>Liens</SidebarGroupLabel>
+
       <NuxtLink
         class="flex items-center gap-2 min-w-0 hover:bg-sidebar-accent px-2 py-1 rounded-md"
         to="https://subway.herrerde.xyz/"
@@ -101,9 +115,10 @@ const siteUrl = useRequestURL().origin;
         <Icon name="lucide:rocket" class="flex-shrink-0" />
         <span class="truncate">Subway Gen</span>
       </NuxtLink>
+
       <NuxtLink
         class="flex items-center gap-2 min-w-0 hover:bg-sidebar-accent px-2 py-1 rounded-md"
-        to="https://github.com/HerrErde/SubwayBooster"
+        to="https://github.com/HerrErde/Subway Booster"
         :external="true"
         target="_blank"
       >
@@ -136,23 +151,24 @@ const siteUrl = useRequestURL().origin;
       <Separator />
 
       <DropdownMenu>
-        <DropdownMenuTrigger as-child
-          ><SidebarMenuButton
-            ><Icon name="lucide:monitor" /> Thème</SidebarMenuButton
-          ></DropdownMenuTrigger
-        >
+        <DropdownMenuTrigger as-child>
+          <SidebarMenuButton>
+            <Icon name="lucide:monitor" /> Thèmes
+          </SidebarMenuButton>
+        </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem @click="colorMode.preference = 'light'"
-            ><Icon name="lucide:sun" /> Lumière</DropdownMenuItem
-          >
-          <DropdownMenuItem @click="colorMode.preference = 'dark'"
-            ><Icon name="lucide:moon" /> Sombre</DropdownMenuItem
-          >
-          <DropdownMenuItem @click="colorMode.preference = 'system'"
-            ><Icon name="lucide:monitor" /> Système</DropdownMenuItem
-          >
+          <DropdownMenuItem @click="colorMode.preference = 'light'">
+            <Icon name="lucide:sun" /> Lumière
+          </DropdownMenuItem>
+          <DropdownMenuItem @click="colorMode.preference = 'dark'">
+            <Icon name="lucide:moon" /> Sombre
+          </DropdownMenuItem>
+          <DropdownMenuItem @click="colorMode.preference = 'system'">
+            <Icon name="lucide:monitor" /> Système
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </SidebarFooter>
   </Sidebar>
 </template>
+
