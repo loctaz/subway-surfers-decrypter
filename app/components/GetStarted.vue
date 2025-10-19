@@ -34,8 +34,8 @@ async function uploadFilesFromBtn() {
         <CardDescription>
           Importez vos fichiers de profil Subway Surfers pour les consulter et les modifier. Vous
           pouvez sélectionner directement des fichiers JSON ou coller du contenu directement depuis votre
-          presse-papiers. Vous pouvez également copier le <strong>texte</strong> du
-          fichier
+          presse-papiers. Vous pouvez aussi simplement copier le <strong>texte</strong> du
+          fichier.
         </CardDescription>
       </CardHeader>
       <CardContent>
