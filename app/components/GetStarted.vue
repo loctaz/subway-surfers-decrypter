@@ -34,7 +34,7 @@ async function uploadFilesFromBtn() {
         <CardDescription>
           Importez vos fichiers de profil Subway Surfers pour les consulter et les modifier. Vous
           pouvez sélectionner directement des fichiers JSON ou coller du contenu directement depuis votre
-          presse-papiers. Vous pouvez également simplement copier le <strong>texte</strong> du
+          presse-papiers. Vous pouvez également copier le <strong>texte</strong> du
           fichier
         </CardDescription>
       </CardHeader>
@@ -50,7 +50,7 @@ async function uploadFilesFromBtn() {
           </Button>
         </div>
         <p class="mt-4 text-xs opacity-70">
-          Astuce : vous pouvez également glisser-déposer des fichiers .json n'importe où sur la page ou
+          <strong>Astuce :</strong> vous pouvez également glisser-déposer des fichiers .json n'importe où sur la page ou
           appuyer sur Ctrl/Cmd+V pour les coller.
         </p>
       </CardContent>
