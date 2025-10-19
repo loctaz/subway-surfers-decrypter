@@ -30,28 +30,28 @@ async function uploadFilesFromBtn() {
         >
           <Icon name="lucide:folder-open" class="size-8 text-primary" />
         </div>
-        <CardTitle>Get started</CardTitle>
+        <CardTitle>Commencer</CardTitle>
         <CardDescription>
-          Import your Subway Surfers profile files to view and edit them. You
-          can directly select JSON files or paste content directly from your
-          clipboard. You can also just copy the <strong>text</strong> of the
-          file
+          Importez vos fichiers de profil Subway Surfers pour les consulter et les modifier. Vous
+          pouvez sélectionner directement des fichiers JSON ou coller du contenu directement depuis votre
+          presse-papiers. Vous pouvez également simplement copier le <strong>texte</strong> du
+          fichier
         </CardDescription>
       </CardHeader>
       <CardContent>
         <div class="flex flex-wrap items-center justify-center gap-3">
           <Button @click="uploadFilesFromBtn">
             <Icon name="lucide:upload" />
-            Upload file(s)
+            Télécharger le(s) fichier(s)
           </Button>
           <Button variant="secondary" @click="importFromPaste">
             <Icon name="lucide:clipboard" />
-            Paste from clipboard
+            Coller depuis le presse-papiers
           </Button>
         </div>
         <p class="mt-4 text-xs opacity-70">
-          Tip: You can also drag & drop .json files anywhere on the page or
-          press Ctrl/Cmd+V to paste.
+          Astuce : vous pouvez également glisser-déposer des fichiers .json n'importe où sur la page ou
+          appuyer sur Ctrl/Cmd+V pour les coller.
         </p>
       </CardContent>
     </Card>
