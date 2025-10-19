@@ -30,8 +30,8 @@ useGlobalPaste();
         >
           <div class="bg-secondary rounded-lg p-8 shadow-lg text-center">
             <Icon name="lucide:folder-open" class="mb-4 text-4xl" />
-            <h3 class="text-xl font-semibold mb-2">Drop JSON files here</h3>
-            <p class="">Release to import your files</p>
+            <h3 class="text-xl font-semibold mb-2">Faites glisser ici les fichiers JSON</h3>
+            <p class="">Valider pour importer vos fichiers</p>
           </div>
         </div>
       </div>
