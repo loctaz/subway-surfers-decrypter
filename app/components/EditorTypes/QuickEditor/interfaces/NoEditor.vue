@@ -2,10 +2,10 @@
   <div class="size-full flex flex-col items-center justify-center">
     <Icon name="lucide:frown" class="text-4xl" />
     <span class="text-xl text-muted-foreground"
-      >No quick editor available for this file</span
+      >Aucun éditeur rapide disponible pour ce fichier</span
     >
     <Button @click="$emit('useOther')" class="mt-4" size="lg"
-      >Use raw editor</Button
+      >Utiliser l'éditeur brut</Button
     >
   </div>
 </template>
