@@ -43,8 +43,8 @@ function restore() {
         </div>
 
         <TabsList class="w-full md:max-w-[400px]">
-          <TabsTrigger value="quick_edit"> Quick edit </TabsTrigger>
-          <TabsTrigger value="raw_edit"> Raw edit </TabsTrigger>
+          <TabsTrigger value="quick_edit"> Modification rapide </TabsTrigger>
+          <TabsTrigger value="raw_edit"> Modification brut </TabsTrigger>
         </TabsList>
       </div>
 
@@ -59,19 +59,18 @@ function restore() {
     <Dialog v-model:open="showRestoreModal">
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Restore to original state</DialogTitle>
+          <DialogTitle>Restaurez le fichier à son état d'origine</DialogTitle>
           <DialogDescription>
-            Restore the file to the original state. You will lose all your
-            changes.
+            Restaurez le fichier à son état d'origine. Vous perdrez toutes vos modifications.
           </DialogDescription>
         </DialogHeader>
 
         <DialogFooter>
           <DialogClose as-child>
-            <Button type="button" variant="secondary"> Close </Button>
+            <Button type="button" variant="secondary"> Fermer </Button>
           </DialogClose>
 
-          <Button type="button" @click="restore"> Restore </Button>
+          <Button type="button" @click="restore"> Restaurer </Button>
         </DialogFooter>
       </DialogContent>
     </Dialog>
