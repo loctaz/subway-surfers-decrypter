@@ -58,7 +58,7 @@ const siteUrl = useRequestURL().origin;
             class="whitespace-nowrap"
           >
             <Icon name="lucide:clipboard" />
-            Coller depuis le presse-papiers
+            Coller depuis le presse-papier
           </SidebarMenuButton>
           <!-- ✅ Fin de la correction -->
         </SidebarGroupContent>
