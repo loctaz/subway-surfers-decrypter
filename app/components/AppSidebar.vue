@@ -38,7 +38,7 @@ const siteUrl = useRequestURL().origin;
         aria-label="Open site URL"
         class="px-2 text-xs opacity-70 transition-opacity flex items-center gap-1 min-w-0"
       >
-        <Icon name="lucide:globe" class="h-3 w-3 flex-shrink-0" />
+        <Icon name="lucide:copyright" class="h-3 w-3 flex-shrink-0" />
         <span class="truncate">{{ siteUrl }}</span>
       </span>
     </SidebarHeader>
