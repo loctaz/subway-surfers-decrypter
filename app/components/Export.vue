@@ -87,7 +87,7 @@ async function saveFile() {
             class="size-full flex-col items-center"
             @click="copy()"
           >
-            <Icon name="lucide:files" class="text-5xl" /> Copy
+            <Icon name="lucide:files" class="text-5xl" /> Copier
           </Button>
         </AspectRatio>
       </div>
@@ -98,7 +98,7 @@ async function saveFile() {
             class="size-full flex-col items-center"
             @click="saveFile()"
           >
-            <Icon name="lucide:download" class="text-5xl" /> Save file
+            <Icon name="lucide:download" class="text-5xl" /> Enregistrer le fichier
           </Button>
         </AspectRatio>
       </div>
@@ -110,7 +110,7 @@ async function saveFile() {
       <DialogHeader>
         <DialogTitle>Export</DialogTitle>
         <DialogDescription>
-          Export file
+          Exporter le fichier
           {{ filesStore.files[exportModal.state.value.fileIndex]!.name }}
         </DialogDescription>
       </DialogHeader>
@@ -121,9 +121,9 @@ async function saveFile() {
   <Drawer v-else v-model:open="exportModal.state.value.visible">
     <DrawerContent>
       <DrawerHeader class="text-left">
-        <DrawerTitle>Export</DrawerTitle>
+        <DrawerTitle>Exporter</DrawerTitle>
         <DrawerDescription>
-          Export file
+          Exporter le fichier
           {{ filesStore.files[exportModal.state.value.fileIndex]!.name }}
         </DrawerDescription>
       </DrawerHeader>
