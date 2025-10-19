@@ -29,7 +29,7 @@ const siteUrl = useRequestURL().origin;
   <Sidebar v-bind="props">
     <SidebarHeader>
       <div class="px-2 py-1 text-sm font-semibold">
-        Subway Surfers Decrypter
+        Décrypteur Subway Surfers
       </div>
       <span
         :to="siteUrl"
@@ -45,20 +45,20 @@ const siteUrl = useRequestURL().origin;
     <SidebarContent>
       <SidebarGroup>
         <SidebarGroupLabel>Actions</SidebarGroupLabel>
-        <SidebarGroupContent>
-          <SidebarMenuButton @click="uploadFilesFromBtn"
-            ><Icon name="lucide:upload" /> Upload file(s)</SidebarMenuButton
+        <SidebarGroupContent> class="space-y-2">
+          <SidebarMenuButton @click="uploadFilesFromBtn" class="whitespace-nowrap">
+            ><Icon name="lucide:upload" /> Télécharger le(s) fichier(s)</SidebarMenuButton
           >
-          <SidebarMenuButton @click="importFromPaste"
-            ><Icon name="lucide:clipboard" /> Paste from
-            clipboard</SidebarMenuButton
+          <SidebarMenuButton @click="importFromPaste" class="whitespace-nowrap">
+            ><Icon name="lucide:clipboard" /> Coller depuis le presse-papiers
+          </SidebarMenuButton
           >
         </SidebarGroupContent>
       </SidebarGroup>
 
       <SidebarGroup>
         <SidebarGroupLabel v-if="filesStore.files.length > 0"
-          >Loaded files</SidebarGroupLabel
+          >Fichiers chargés</SidebarGroupLabel
         >
         <SidebarGroupContent v-auto-animate>
           <ContextMenu v-for="(file, index) in filesStore.files" :key="file.id">
@@ -77,12 +77,12 @@ const siteUrl = useRequestURL().origin;
                 {{ file.name }}</ContextMenuLabel
               >
               <ContextMenuItem @click="exportModal.showModal(index)"
-                ><Icon name="lucide:download" /> Export</ContextMenuItem
+                ><Icon name="lucide:download" /> Exporter</ContextMenuItem
               >
               <ContextMenuItem
                 class="text-red-600"
                 @click="filesStore.removeFile(index)"
-                ><Icon name="lucide:trash" /> Delete</ContextMenuItem
+                ><Icon name="lucide:trash" /> Supprimer</ContextMenuItem
               >
             </ContextMenuContent>
           </ContextMenu>
@@ -91,7 +91,7 @@ const siteUrl = useRequestURL().origin;
     </SidebarContent>
 
     <SidebarFooter>
-      <SidebarGroupLabel>Links</SidebarGroupLabel>
+      <SidebarGroupLabel>Liens</SidebarGroupLabel>
       <NuxtLink
         class="flex items-center gap-2 min-w-0 hover:bg-sidebar-accent px-2 py-1 rounded-md"
         to="https://subway.herrerde.xyz/"
@@ -99,7 +99,7 @@ const siteUrl = useRequestURL().origin;
         target="_blank"
       >
         <Icon name="lucide:rocket" class="flex-shrink-0" />
-        <span class="truncate">SubwayGen</span>
+        <span class="truncate">Subway Gen</span>
       </NuxtLink>
       <NuxtLink
         class="flex items-center gap-2 min-w-0 hover:bg-sidebar-accent px-2 py-1 rounded-md"
@@ -108,14 +108,14 @@ const siteUrl = useRequestURL().origin;
         target="_blank"
       >
         <Icon name="lucide:rocket" class="flex-shrink-0" />
-        <span class="truncate">SubwayBooster</span>
+        <span class="truncate">Subway Booster</span>
       </NuxtLink>
 
       <Separator />
 
       <NuxtLink
         class="flex items-center gap-2 min-w-0 hover:bg-sidebar-accent px-2 py-1 rounded-md"
-        to="https://discord.gg/nghc84wjSZ"
+        to="https://discord.gg/M6EUKX7A3c"
         :external="true"
         target="_blank"
       >
@@ -125,7 +125,7 @@ const siteUrl = useRequestURL().origin;
 
       <NuxtLink
         class="flex items-center gap-2 min-w-0 hover:bg-sidebar-accent px-2 py-1 rounded-md"
-        to="https://github.com/le0o0oo/subway-surfers-decrypter"
+        to="https://github.com/loctazzz"
         :external="true"
         target="_blank"
       >
@@ -138,18 +138,18 @@ const siteUrl = useRequestURL().origin;
       <DropdownMenu>
         <DropdownMenuTrigger as-child
           ><SidebarMenuButton
-            ><Icon name="lucide:monitor" /> Theme</SidebarMenuButton
+            ><Icon name="lucide:monitor" /> Thème</SidebarMenuButton
           ></DropdownMenuTrigger
         >
         <DropdownMenuContent>
           <DropdownMenuItem @click="colorMode.preference = 'light'"
-            ><Icon name="lucide:sun" /> Light</DropdownMenuItem
+            ><Icon name="lucide:sun" /> Lumière</DropdownMenuItem
           >
           <DropdownMenuItem @click="colorMode.preference = 'dark'"
-            ><Icon name="lucide:moon" /> Dark</DropdownMenuItem
+            ><Icon name="lucide:moon" /> Sombre</DropdownMenuItem
           >
           <DropdownMenuItem @click="colorMode.preference = 'system'"
-            ><Icon name="lucide:monitor" /> System</DropdownMenuItem
+            ><Icon name="lucide:monitor" /> Système</DropdownMenuItem
           >
         </DropdownMenuContent>
       </DropdownMenu>
