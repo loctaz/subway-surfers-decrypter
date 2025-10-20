@@ -7,7 +7,6 @@ interface LoadedFile {
   version: number;
   originalData: Readonly<Record<string, any>>;
   data: Record<string, any>;
-
   rawInput: string;
 }
 
@@ -16,53 +15,78 @@ export const useFilesStore = defineStore("filesStore", {
     files: [] as LoadedFile[],
     selectedIndex: null as number | null,
   }),
+
   actions: {
+    // 🔄 Charger les fichiers sauvegardés au démarrage
+    loadFromLocalStorage() {
+      const saved = localStorage.getItem("savedFiles");
+      if (saved) {
+        try {
+          const parsed = JSON.parse(saved);
+          this.files = parsed;
+        } catch (e) {
+          console.error("Erreur lors du chargement du localStorage :", e);
+          this.files = [];
+        }
+      }
+    },
+
+    // 💾 Sauvegarder les fichiers actuels dans le localStorage
+    saveToLocalStorage() {
+      localStorage.setItem("savedFiles", JSON.stringify(this.files));
+    },
+
     async addFile(content: string, name?: string) {
       if (content.startsWith("{")) {
-        // It is a json file with {version: number, data: Record<string, any>}
         const json = JSON.parse(content);
         const jsonData = await TextCipher.decrypt(json.data);
         const parsedJsonData = JSON.parse(jsonData);
 
         this.files.push({
-          id: crypto.randomUUID() as string,
+          id: crypto.randomUUID(),
           name: name || "unknown.json",
           version: json.version,
           originalData: parsedJsonData,
           data: parsedJsonData,
           rawInput: content,
         });
+
+        this.reorderFilesAlphabetically();
+        this.selectedIndex = this.files.length - 1;
+
+        this.saveToLocalStorage(); // ✅ Sauvegarde après ajout
       } else {
         throw new Error("Invalid file content");
       }
-
-      this.reorderFilesAlphabetically();
-      this.selectedIndex = this.files.length - 1;
     },
+
     reorderFilesAlphabetically() {
       this.files.sort((a, b) => a.name.localeCompare(b.name));
+      this.saveToLocalStorage(); // ✅ Sauvegarde après tri
     },
+
     setSelectedIndex(index: number) {
       this.selectedIndex = index;
     },
+
     removeFile(index: number) {
       this.files.splice(index, 1);
 
       if (this.files.length === 0) {
         this.selectedIndex = null;
       } else if (this.selectedIndex === index) {
-        // If the removed file was selected
         if (index - 1 >= 0) {
-          this.selectedIndex = index - 1; // Select previous
+          this.selectedIndex = index - 1;
         } else if (index < this.files.length) {
-          this.selectedIndex = index; // Select next (shifted into current index)
+          this.selectedIndex = index;
         } else {
-          this.selectedIndex = null; // Shouldn't normally happen, but safe fallback
+          this.selectedIndex = null;
         }
       } else if (this.selectedIndex !== null && this.selectedIndex > index) {
-        // If selection was after the removed index, shift it back by 1
         this.selectedIndex--;
       }
+
+      this.saveToLocalStorage(); // ✅ Sauvegarde après suppression
     },
   },
 });
