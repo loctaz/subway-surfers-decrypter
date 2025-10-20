@@ -30,7 +30,7 @@ function restore() {
             @click="exportModal.showModal(filesStore.selectedIndex!)"
           >
             <Icon name="lucide:download" />
-            Export
+            Exporter
           </Button>
           <Button
             variant="secondary"
@@ -38,7 +38,7 @@ function restore() {
             @click="showRestoreModal = true"
           >
             <Icon name="lucide:refresh-cw" />
-            Restore
+            Restaurer
           </Button>
         </div>
 
