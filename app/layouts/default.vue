@@ -15,7 +15,7 @@ useGlobalPaste();
           <span class="font-bold">{{
             filesStore.selectedIndex !== null
               ? filesStore.files[filesStore.selectedIndex]?.name
-              : "No file selected"
+              : "Aucun fichier sélectionné"
           }}</span>
         </div>
       </header>
