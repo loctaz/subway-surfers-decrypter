@@ -22,9 +22,9 @@ onMounted(() => {
   <AlertDialog v-model:open="$pwa!.needRefresh">
     <AlertDialogContent>
       <AlertDialogHeader>
-        <AlertDialogTitle>Update available</AlertDialogTitle>
+        <AlertDialogTitle>Mise à jour disponible</AlertDialogTitle>
         <AlertDialogDescription>
-          A new update is available. Please refresh the page to get the latest
+          Une nouvelle mise à jour est disponible. Veuillez actualiser la page pour obtenir la dernière
           version.
         </AlertDialogDescription>
       </AlertDialogHeader>
