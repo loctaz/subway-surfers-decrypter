@@ -29,7 +29,7 @@ const siteUrl = useRequestURL().origin;
   <Sidebar v-bind="props">
     <SidebarHeader>
       <div class="px-2 py-1 text-sm font-semibold">
-        Décrypteur Subway Surfers
+        Décrypter Subway Surfers
       </div>
       <span
         :to="siteUrl"
