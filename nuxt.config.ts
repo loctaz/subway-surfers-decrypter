@@ -39,11 +39,11 @@ export default defineNuxtConfig({
   },
   app: {
     head: {
-      title: "Subway Surfers Decrypter",
+      title: "Décrypteur Subway Surfers",
       meta: [
         {
           name: "description",
-          content: "An online decrypter for Subway Surfers",
+          content: "Un décrypteur en ligne pour Subway Surfers",
         },
         {
           name: "google-site-verification",
@@ -57,10 +57,10 @@ export default defineNuxtConfig({
   pwa: {
     registerType: "autoUpdate",
     manifest: {
-      id: "https://subway-surfers-decrypter.vercel.app",
-      name: "Subway Surfers Decrypter",
+      id: "https://subway-surfers-decryptefe.vercel.app/",
+      name: "Décrypteur Subway Surfers",
       short_name: "SS Decrypter",
-      description: "Decrypt Subway Surfers files",
+      description: "Décrypter les fichiers Subway Surfers",
       theme_color: "black",
       background_color: "black",
       lang: "en",
