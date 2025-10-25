@@ -29,8 +29,10 @@ const siteUrl = useRequestURL().origin;
   <Sidebar v-bind="props">
     <SidebarHeader>
       <div class="px-2 py-1 text-sm font-semibold">
-        Décrypter Subway Surfers
+        Décrypteur Subway Surfers
       </div>
+
+      <!-- 🌐 Lien principal -->
       <span
         :to="siteUrl"
         :external="true"
@@ -41,6 +43,22 @@ const siteUrl = useRequestURL().origin;
         <Icon name="lucide:globe" class="h-3 w-3 flex-shrink-0" />
         <span class="truncate">{{ siteUrl }}</span>
       </span>
+
+      <!-- 💖 Traduit par Loctaz -->
+      <span
+        class="px-2 text-xs opacity-70 transition-opacity flex items-center gap-1 min-w-0"
+      >
+        <Icon name="lucide:hand-heart" class="h-3 w-3 flex-shrink-0" />
+        <span class="truncate">Traduit par Loctaz</span>
+      </span>
+
+      <!-- 🐙 Crédit à Leo -->
+      <span
+        class="px-2 text-xs opacity-70 transition-opacity flex items-center gap-1 min-w-0"
+      >
+        <Icon name="lucide:github" class="h-3 w-3 flex-shrink-0" />
+        <span class="truncate">Crédit à Leo</span>
+      </span>
     </SidebarHeader>
 
     <SidebarContent>
@@ -48,19 +66,17 @@ const siteUrl = useRequestURL().origin;
         <SidebarGroupLabel>Actions</SidebarGroupLabel>
         <SidebarGroupContent>
           <SidebarMenuButton @click="uploadFilesFromBtn">
-            <Icon name="lucide:upload" />
+            <Icon name="lucide:upload" class="h-4 w-4 flex-shrink-0" />
             Télécharger le(s) fichier(s)
           </SidebarMenuButton>
 
-          <!-- ✅ Correction ici -->
           <SidebarMenuButton
             @click="importFromPaste"
             class="whitespace-nowrap"
           >
-            <Icon name="lucide:clipboard" />
+            <Icon name="lucide:clipboard" class="h-4 w-4 flex-shrink-0" />
             Coller depuis le presse-papiers
           </SidebarMenuButton>
-          <!-- ✅ Fin de la correction -->
         </SidebarGroupContent>
       </SidebarGroup>
 
@@ -153,7 +169,7 @@ const siteUrl = useRequestURL().origin;
       <DropdownMenu>
         <DropdownMenuTrigger as-child>
           <SidebarMenuButton>
-            <Icon name="lucide:monitor" /> Thèmes
+            <Icon name="lucide:monitor" /> Thème
           </SidebarMenuButton>
         </DropdownMenuTrigger>
         <DropdownMenuContent>
@@ -171,4 +187,3 @@ const siteUrl = useRequestURL().origin;
     </SidebarFooter>
   </Sidebar>
 </template>
-
