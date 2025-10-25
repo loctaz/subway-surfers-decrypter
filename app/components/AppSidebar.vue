@@ -48,7 +48,7 @@ const siteUrl = useRequestURL().origin;
       <span
         class="px-2 text-xs opacity-70 transition-opacity flex items-center gap-1 min-w-0"
       >
-        <Icon name="lucide:hand-heart" class="h-3 w-3 flex-shrink-0" />
+        <Icon name="lucide:languages" class="h-3 w-3 flex-shrink-0" />
         <span class="truncate">Traduit par Loctaz</span>
       </span>
 
