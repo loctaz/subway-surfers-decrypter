@@ -33,7 +33,7 @@ export const useFilesStore = defineStore("filesStore", {
           rawInput: content,
         });
       } else {
-        throw new Error("Invalid file content");
+        throw new Error("Contenu du fichier invalide");
       }
 
       this.reorderFilesAlphabetically();
