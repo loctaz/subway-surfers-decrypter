@@ -245,10 +245,10 @@ function onToggleSelectedCharacter(
       class="flex flex-col md:flex-row items-stretch md:items-center gap-2 p-1"
     >
       <div class="w-full md:flex-1">
-        <Input v-model="searchQuery" placeholder="Search characters…" />
+        <Input v-model="searchQuery" placeholder="Rechercher des personnages..." />
       </div>
       <Button class="w-full md:w-auto" variant="default" @click="addCharacter">
-        <Icon name="lucide:plus" class="mr-1" /> Add character
+        <Icon name="lucide:plus" class="mr-1" /> Ajouter un personnage
       </Button>
     </div>
 
