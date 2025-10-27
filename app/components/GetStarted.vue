@@ -23,19 +23,21 @@ async function uploadFilesFromBtn() {
 
 <template>
   <div class="flex items-center justify-center min-h-[60vh] p-4 w-full">
-    <Card class="w-full max-w-xl text-center">
-      <CardHeader>
+    <Card class="w-full max-w-xl">
+      <CardHeader class="text-center">
         <div
           class="mx-auto mb-2 size-14 rounded-full bg-primary/10 flex items-center justify-center"
         >
           <Icon name="lucide:folder-open" class="size-8 text-primary" />
         </div>
         <CardTitle>Commencer</CardTitle>
-        <CardDescription>
-          Importez vos fichiers de profil Subway Surfers pour les consulter et les modifier. Vous
-          pouvez sélectionner directement des fichiers JSON ou coller du contenu directement depuis votre
-          presse-papiers. Vous pouvez aussi simplement copier le <strong>texte</strong> du
-          fichier.
+        <CardDescription
+          class="text-left leading-relaxed text-sm text-muted-foreground mt-2"
+        >
+          Importez vos fichiers de profil <strong>Subway Surfers</strong> pour les consulter et les
+          modifier. Vous pouvez sélectionner directement des fichiers JSON ou coller du contenu
+          directement depuis votre presse-papiers. Vous pouvez aussi simplement copier le
+          <strong>texte</strong> du fichier.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -49,9 +51,9 @@ async function uploadFilesFromBtn() {
             Coller depuis le presse-papiers
           </Button>
         </div>
-        <p class="mt-4 text-xs opacity-70">
-          <strong>Astuce :</strong> vous pouvez également glisser-déposer des fichiers .json n'importe où sur la page ou
-          appuyer sur Ctrl/Cmd+V pour les coller.
+        <p class="mt-4 text-xs opacity-70 text-center">
+          <strong>Astuce :</strong> vous pouvez également glisser-déposer des fichiers .json
+          n'importe où sur la page ou appuyer sur Ctrl/Cmd+V pour les coller.
         </p>
       </CardContent>
     </Card>
