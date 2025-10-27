@@ -163,26 +163,23 @@ const siteUrl = useRequestURL().origin;
       <Separator />
 
       <DropdownMenu>
-        <DropdownMenuTrigger as-child>
-          <SidebarMenuButton>
-            <Icon name="lucide:monitor" /> Thème
-          </SidebarMenuButton>
-        </DropdownMenuTrigger>
+        <DropdownMenuTrigger as-child
+          ><SidebarMenuButton
+            ><Icon name="lucide:monitor" /> Thème</SidebarMenuButton
+          ></DropdownMenuTrigger
+        >
         <DropdownMenuContent>
-          <DropdownMenuItem @click="colorMode.preference = 'light'">
-            <Icon name="lucide:sun" /> Lumière
-          </DropdownMenuItem>
-          <DropdownMenuItem @click="colorMode.preference = 'dark'">
-            <Icon name="lucide:moon" /> Sombre
-          </DropdownMenuItem>
-          <DropdownMenuItem @click="colorMode.preference = 'system'">
-            <Icon name="lucide:monitor" /> Système
-          </DropdownMenuItem>
-          <DropdownMenuItem @click="colorMode.preference = 'blue'">
-            <Icon name="lucide:cloud-moon" /> Bleuté
-          </DropdownMenuItem>
-         </DropdownMenuContent>
-       </DropdownMenu>
-     </SidebarFooter>
-   </Sidebar>
- </template>
+          <DropdownMenuItem @click="colorMode.preference = 'light'"
+            ><Icon name="lucide:sun" /> Lumière</DropdownMenuItem
+          >
+          <DropdownMenuItem @click="colorMode.preference = 'dark'"
+            ><Icon name="lucide:moon" /> Sombre</DropdownMenuItem
+          >
+          <DropdownMenuItem @click="colorMode.preference = 'system'"
+            ><Icon name="lucide:monitor" /> Système</DropdownMenuItem
+          >
+        </DropdownMenuContent>
+      </DropdownMenu>
+    </SidebarFooter>
+  </Sidebar>
+</template>
