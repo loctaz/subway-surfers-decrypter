@@ -61,7 +61,7 @@ function restore() {
         <DialogHeader>
           <DialogTitle>Restaurez le fichier à son état d'origine</DialogTitle>
           <DialogDescription>
-            Restaurez le fichier à son état d'origine. Vous perdrez toutes vos modifications.
+            Restaurez le fichier à son état d'origine ? Vous perdrez toutes vos modifications.
           </DialogDescription>
         </DialogHeader>
 
