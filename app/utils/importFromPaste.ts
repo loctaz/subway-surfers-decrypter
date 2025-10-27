@@ -19,7 +19,7 @@ export default async function importFromPaste(): Promise<void> {
 
     if (!trimmed) {
       toast.message(
-        "Clipboard has no text. If you copied a file, press Ctrl/Cmd+V"
+        "Le presse-papiers ne contient aucun texte. Si vous avez copié un fichier, appuyez sur Ctrl/Cmd+V"
       );
       return;
     }
@@ -27,19 +27,19 @@ export default async function importFromPaste(): Promise<void> {
     try {
       const didImport = await importTextAsFile(trimmed, filesStore);
       if (didImport) {
-        toast.success("Imported 1 item from clipboard");
+        toast.success("1 élément importé depuis le presse-papiers");
       } else {
-        toast.message("Clipboard text did not contain importable JSON");
+        toast.message("Le texte du presse-papiers ne contenait pas de JSON importable");
       }
     } catch (e) {
       toast.error(
-        e instanceof Error ? e.message : "Clipboard text is not valid JSON"
+        e instanceof Error ? e.message : "Le texte du presse-papiers n'est pas au format JSON valide"
       );
     }
   } catch (error) {
     console.error(error);
     toast.error(
-      error instanceof Error ? error.message : "Failed to read clipboard text"
+      error instanceof Error ? error.message : "Échec de la lecture du texte du presse-papiers"
     );
   }
 }
@@ -60,7 +60,7 @@ async function importTextAsFile(
   try {
     parsed = JSON.parse(trimmed);
   } catch {
-    throw new Error("Clipboard content is not valid JSON");
+    throw new Error("Le contenu du presse-papiers n'est pas un JSON valide");
   }
 
   // Case 1: Export wrapper
