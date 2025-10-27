@@ -36,7 +36,7 @@ async function copy() {
   try {
     const result = await exportUtil(exportModal.state.value.fileIndex);
     navigator.clipboard.writeText(result);
-    toast.success(""Copié dans le presse-papiers");
+    toast.success("Copié dans le presse-papiers");
   } catch (error) {
     console.error(error);
     toast.error(
