@@ -40,7 +40,7 @@ async function copy() {
   } catch (error) {
     console.error(error);
     toast.error(
-      error instanceof Error ? error.message : "Failed to copy or export"
+      error instanceof Error ? error.message : "Échec de la copie ou de l'exportation"
     );
   } finally {
     exportModal.state.value.visible = false;
@@ -70,7 +70,7 @@ async function saveFile() {
     toast.success("Download started");
   } catch (error) {
     console.error(error);
-    toast.error(error instanceof Error ? error.message : "Failed to save file");
+    toast.error(error instanceof Error ? error.message : "Échec de l'enregistrement du fichier");
   } finally {
     exportModal.state.value.visible = false;
   }
