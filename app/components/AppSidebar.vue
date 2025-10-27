@@ -182,8 +182,11 @@ const siteUrl = useRequestURL().origin;
           <DropdownMenuItem @click="colorMode.preference = 'system'">
             <Icon name="lucide:monitor" /> Système
           </DropdownMenuItem>
-        </DropdownMenuContent>
-      </DropdownMenu>
-    </SidebarFooter>
-  </Sidebar>
-</template>
+          <DropdownMenuItem @click="colorMode.preference = 'blue'">
+            <Icon name="lucide:cloud-moon" /> Bleuté
+          </DropdownMenuItem>
+         </DropdownMenuContent>
+       </DropdownMenu>
+     </SidebarFooter>
+   </Sidebar>
+ </template>
