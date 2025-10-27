@@ -44,21 +44,17 @@ const siteUrl = useRequestURL().origin;
         <span class="truncate">{{ siteUrl }}</span>
       </span>
 
-      <!-- 💖 Traduit par Loctaz -->
-      <span
-        class="px-2 text-xs opacity-70 transition-opacity flex items-center gap-1 min-w-0"
-      >
-        <Icon name="lucide:heart" class="h-3 w-3 flex-shrink-0" />
-        <span class="truncate">Loctaz - Contribution</span>
-      </span>
+<!-- 💖 Traduit par Loctaz -->
+<div class="flex items-center gap-1 px-2 text-xs opacity-70 min-w-0">
+  <Icon name="lucide:heart" class="h-3 w-3 flex-shrink-0" />
+  <span class="truncate">Loctaz - Contribution</span>
+</div>
 
-      <!-- 🐙 Crédit à Leo -->
-      <span
-        class="px-2 text-xs opacity-70 transition-opacity flex items-center gap-1 min-w-0"
-      >
-        <Icon name="lucide:copyright" class="h-3 w-3 flex-shrink-0" />
-        <span class="truncate">Leo - Crédit accordé</span>
-      </span>
+<!-- 🐙 Crédit à Leo -->
+<div class="flex items-center gap-1 px-2 text-xs opacity-70 min-w-0">
+  <Icon name="lucide:copyright" class="h-3 w-3 flex-shrink-0" />
+  <span class="truncate">Leo - Crédit accordé</span>
+</div>
     </SidebarHeader>
 
     <SidebarContent>
