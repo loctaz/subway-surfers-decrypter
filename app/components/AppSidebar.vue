@@ -56,7 +56,7 @@ const siteUrl = useRequestURL().origin;
       <span
         class="px-2 text-xs opacity-70 transition-opacity flex items-center gap-1 min-w-0"
       >
-        <Icon name="lucide:github" class="h-3 w-3 flex-shrink-0" />
+        <Icon name="lucide:copyright" class="h-3 w-3 flex-shrink-0" />
         <span class="truncate">Crédit à Leo</span>
       </span>
     </SidebarHeader>
@@ -128,7 +128,7 @@ const siteUrl = useRequestURL().origin;
         :external="true"
         target="_blank"
       >
-        <Icon name="lucide:rocket" class="flex-shrink-0" />
+        <Icon name="lucide:wrench" class="flex-shrink-0" />
         <span class="truncate">Subway Gen</span>
       </NuxtLink>
 
