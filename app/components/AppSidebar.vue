@@ -48,8 +48,8 @@ const siteUrl = useRequestURL().origin;
       <span
         class="px-2 text-xs opacity-70 transition-opacity flex items-center gap-1 min-w-0"
       >
-        <Icon name="lucide:languages" class="h-3 w-3 flex-shrink-0" />
-        <span class="truncate">Traduit par Loctaz</span>
+        <Icon name="lucide:heart" class="h-3 w-3 flex-shrink-0" />
+        <span class="truncate">Loctaz - Contribution</span>
       </span>
 
       <!-- 🐙 Crédit à Leo -->
@@ -57,7 +57,7 @@ const siteUrl = useRequestURL().origin;
         class="px-2 text-xs opacity-70 transition-opacity flex items-center gap-1 min-w-0"
       >
         <Icon name="lucide:copyright" class="h-3 w-3 flex-shrink-0" />
-        <span class="truncate">Crédit à Leo</span>
+        <span class="truncate">Leo - Crédit accordé</span>
       </span>
     </SidebarHeader>
 
