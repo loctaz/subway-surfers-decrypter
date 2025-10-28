@@ -28,10 +28,10 @@ const siteUrl = useRequestURL().origin;
 <template>
   <Sidebar v-bind="props">
     <SidebarHeader>
-      <div class="px-2 py-1 text-sm font-semibold">
+      <div class="px-2 py-1 text-sm font-semibold flex items-center gap-1">
         Décrypteur Subway Surfers
+        <Icon name="lucide:lock-keyhole" class="h-3 w-3 flex-shrink-0" />
       </div>
-
       <!-- 🌐 Lien principal -->
       <span
         :to="siteUrl"
