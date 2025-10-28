@@ -16,7 +16,7 @@ async function uploadFilesFromBtn() {
     await uploadFiles();
   } catch (error) {
     console.error(error);
-    toast.error(error instanceof Error ? error.message : "Erreur inconnue");
+    toast.error(error instanceof Error ? error.message : "Unknown error");
   }
 }
 </script>
@@ -59,7 +59,7 @@ async function uploadFilesFromBtn() {
       <!-- Rectangle Efficacité -->
       <div class="flex items-center gap-3 p-3 rounded-lg border border-white/30 bg-black/20">
         <div class="size-12 rounded-full bg-gray-700 flex items-center justify-center">
-          <Icon name="lucide:shield-check" class="h-10 w-10 text-white" />
+          <Icon name="lucide:shield-check" class="h-8 w-8 text-white" />
         </div>
         <div>
           <h3 class="font-bold text-base">Efficacité</h3>
@@ -70,7 +70,7 @@ async function uploadFilesFromBtn() {
       <!-- Rectangle Performance -->
       <div class="flex items-center gap-3 p-3 rounded-lg border border-white/30 bg-black/20">
         <div class="size-12 rounded-full bg-gray-700 flex items-center justify-center">
-          <Icon name="lucide:zap" class="h-10 w-10 text-white" />
+          <Icon name="lucide:zap" class="h-8 w-8 text-white" />
         </div>
         <div>
           <h3 class="font-bold text-base">Performance</h3>
