@@ -27,10 +27,17 @@ const siteUrl = useRequestURL().origin;
 
 <template>
   <Sidebar v-bind="props">
-    <SidebarHeader>
-      <div class="px-2 py-1 text-sm font-semibold">
-        Décrypteur Subway Surfers
-      </div>
+<SidebarHeader>
+  <div class="px-2 py-1 text-sm font-semibold flex items-center justify-between gap-2">
+    <span>Décrypteur Subway Surfers</span>
+    <img
+      src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAANlBMVEVHcEz/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AAD/AACwyUrSAAAAEnRSTlMAC3iyiBb/1MMH52qb8VYrSTbszWd4AAAAn0lEQVR4Aa3OtQEEMRAEwRGNmPIP9nkPZX55wm38jdLGWIclyw+LBU3SB5IaN5H0EUAiI64y6fDiVk8LKz48w+IwQbpWPfhopMNFtwN9RMDpiYuZi+dLv+5rkygCjjLPcOB4cYyZsun5NbCL/FJyzeKgft8BWBQZ+a0tirTsyaHCbkilWxQpqZXcdik6qjgK3CWjcTJkP0/cNVNyx/88AeQ4B8dB323NAAAAAElFTkSuQmCC"
+      alt="Logo"
+      class="w-6 h-6 object-contain"
+    />
+  </div>
+</SidebarHeader>
+
 
       <!-- 🌐 Lien principal -->
       <span
