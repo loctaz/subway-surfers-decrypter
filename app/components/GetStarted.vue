@@ -55,30 +55,40 @@ async function uploadFilesFromBtn() {
     </Card>
 
     <!-- Deux rectangles en bas -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mt-6 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mt-8 px-4">
       <!-- Rectangle Efficacité -->
-      <div class="flex items-center gap-3 p-3 rounded-lg border border-white/30 bg-black/20">
-        <div class="size-12 rounded-full bg-gray-700 flex items-center justify-center">
-          <Icon name="lucide:shield-check" class="h-8 w-8 text-white" />
-        </div>
-        <div>
-          <h3 class="font-bold text-base">Efficacité</h3>
-          <p class="text-xs opacity-80">Service rapide, précis et disponible à tout moment.</p>
-        </div>
-      </div>
+      <Card class="w-full">
+        <CardContent class="flex items-center gap-4 p-4">
+          <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center">
+            <Icon name="lucide:shield-check" class="size-8 text-primary" />
+          </div>
+          <div>
+            <h3 class="font-bold text-lg">Efficacité</h3>
+            <p class="text-sm text-muted-foreground">
+              Service rapide, précis et disponible à tout moment.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
 
       <!-- Rectangle Performance -->
-      <div class="flex items-center gap-3 p-3 rounded-lg border border-white/30 bg-black/20">
-        <div class="size-12 rounded-full bg-gray-700 flex items-center justify-center">
-          <Icon name="lucide:zap" class="h-8 w-8 text-white" />
-        </div>
-        <div>
-          <h3 class="font-bold text-base">Performance</h3>
-          <p class="text-xs opacity-80">Système optimisé avec un déchiffrement instantané.</p>
-        </div>
-      </div>
+      <Card class="w-full">
+        <CardContent class="flex items-center gap-4 p-4">
+          <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center">
+            <Icon name="lucide:zap" class="size-8 text-primary" />
+          </div>
+          <div>
+            <h3 class="font-bold text-lg">Performance</h3>
+            <p class="text-sm text-muted-foreground">
+              Système optimisé avec un déchiffrement instantané.
+            </p>
+          </div>
+        </CardContent>
+      </Card>
     </div>
   </div>
 </template>
 
-<style></style>
+<style>
+/* Si tu as besoin de styles personnalisés supplémentaires, ajoute-les ici */
+</style>
