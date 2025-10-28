@@ -22,20 +22,18 @@ async function uploadFilesFromBtn() {
 </script>
 
 <template>
-  <div class="flex items-center justify-center min-h-[60vh] p-4 w-full">
+  <div class="flex flex-col items-center justify-center min-h-[60vh] p-4 w-full">
+    <!-- Carte centrale existante -->
     <Card class="w-full max-w-xl text-center">
       <CardHeader>
-        <div
-          class="mx-auto mb-2 size-14 rounded-full bg-primary/10 flex items-center justify-center"
-        >
+        <div class="mx-auto mb-2 size-14 rounded-full bg-primary/10 flex items-center justify-center">
           <Icon name="lucide:folder-open" class="size-8 text-primary" />
         </div>
         <CardTitle>Commencer</CardTitle>
         <CardDescription>
           Importez vos fichiers de profil Subway Surfers pour les consulter et les modifier. Vous
           pouvez sélectionner directement des fichiers JSON ou coller du contenu directement depuis votre
-          presse-papiers. Vous pouvez aussi simplement copier le <strong>texte</strong> du
-          fichier.
+          presse-papiers. Vous pouvez aussi simplement copier le <strong>texte</strong> du fichier.
         </CardDescription>
       </CardHeader>
       <CardContent>
@@ -55,6 +53,27 @@ async function uploadFilesFromBtn() {
         </p>
       </CardContent>
     </Card>
+
+    <!-- Deux rectangles en bas -->
+    <div class="bg-black text-white p-4 grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mt-8">
+      <!-- Rectangle Efficacité -->
+      <div class="bg-gray-900 p-4 rounded-lg flex items-center gap-3">
+        <Icon name="lucide:trending-up" class="h-8 w-8 text-orange-500" />
+        <div>
+          <h3 class="font-bold text-lg">Efficacité</h3>
+          <p class="text-sm opacity-80">Service rapide, précis et disponible à tout moment.</p>
+        </div>
+      </div>
+
+      <!-- Rectangle Performance -->
+      <div class="bg-gray-900 p-4 rounded-lg flex items-center gap-3">
+        <Icon name="lucide:zap" class="h-8 w-8 text-orange-500" />
+        <div>
+          <h3 class="font-bold text-lg">Performance</h3>
+          <p class="text-sm opacity-80">Système optimisé avec un déchiffrement instantané.</p>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
