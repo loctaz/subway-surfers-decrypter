@@ -55,26 +55,26 @@ async function uploadFilesFromBtn() {
     </Card>
 
     <!-- Deux rectangles en bas -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mt-8 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mt-6 px-4">
       <!-- Rectangle Efficacité -->
-      <div class="flex items-center gap-4 p-4 rounded-lg border border-white/20 bg-transparent">
-        <div class="size-16 rounded-full bg-gray-700 flex items-center justify-center">
-          <Icon name="lucide:shield-check" class="h-11 w-11 text-orange-500" />
+      <div class="flex items-center gap-3 p-3 rounded-lg border border-white/30 bg-black/20">
+        <div class="size-12 rounded-full bg-gray-700 flex items-center justify-center">
+          <Icon name="lucide:shield-check" class="h-12 w-12 text-white" />
         </div>
         <div>
-          <h3 class="font-bold text-lg">Efficacité</h3>
-          <p class="text-sm opacity-80">Service rapide, précis et disponible à tout moment.</p>
+          <h3 class="font-bold text-base">Efficacité</h3>
+          <p class="text-xs opacity-80">Service rapide, précis et disponible à tout moment.</p>
         </div>
       </div>
 
       <!-- Rectangle Performance -->
-      <div class="flex items-center gap-4 p-4 rounded-lg border border-white/20 bg-transparent">
-        <div class="size-16 rounded-full bg-gray-700 flex items-center justify-center">
-          <Icon name="lucide:zap" class="h-11 w-11 text-orange-500" />
+      <div class="flex items-center gap-3 p-3 rounded-lg border border-white/30 bg-black/20">
+        <div class="size-12 rounded-full bg-gray-700 flex items-center justify-center">
+          <Icon name="lucide:zap" class="h-12 w-12 text-white" />
         </div>
         <div>
-          <h3 class="font-bold text-lg">Performance</h3>
-          <p class="text-sm opacity-80">Système optimisé avec un déchiffrement instantané.</p>
+          <h3 class="font-bold text-base">Performance</h3>
+          <p class="text-xs opacity-80">Système optimisé avec un déchiffrement instantané.</p>
         </div>
       </div>
     </div>
