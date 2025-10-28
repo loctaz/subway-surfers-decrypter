@@ -55,10 +55,10 @@ async function uploadFilesFromBtn() {
     </Card>
 
     <!-- Deux rectangles en bas -->
-    <div class="flex flex-col md:flex-row gap-4 w-full max-w-xl mt-8 px-4">
+    <div class="flex flex-row gap-4 w-full max-w-xl mt-8 px-0">
       <!-- Rectangle Efficacité -->
-      <Card class="w-full md:w-1/2 h-24 flex items-center">
-        <CardContent class="flex items-center gap-4 p-4 h-full">
+      <Card class="flex-1 min-w-0">
+        <CardContent class="flex items-center gap-4 p-4 h-24">
           <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center">
             <Icon name="lucide:shield-check" class="size-8 text-primary" />
           </div>
@@ -70,10 +70,9 @@ async function uploadFilesFromBtn() {
           </div>
         </CardContent>
       </Card>
-
       <!-- Rectangle Performance -->
-      <Card class="w-full md:w-1/2 h-24 flex items-center">
-        <CardContent class="flex items-center gap-4 p-4 h-full">
+      <Card class="flex-1 min-w-0">
+        <CardContent class="flex items-center gap-4 p-4 h-24">
           <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center">
             <Icon name="lucide:zap" class="size-8 text-primary" />
           </div>
@@ -90,5 +89,5 @@ async function uploadFilesFromBtn() {
 </template>
 
 <style>
-/* Ajoute ici des styles personnalisés si nécessaire */
+/* Styles personnalisés si nécessaire */
 </style>
