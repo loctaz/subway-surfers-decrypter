@@ -16,7 +16,7 @@ async function uploadFilesFromBtn() {
     await uploadFiles();
   } catch (error) {
     console.error(error);
-    toast.error(error instanceof Error ? error.message : "Erreur inconnue");
+    toast.error(error instanceof Error ? error.message : "Unknown error");
   }
 }
 </script>
@@ -55,10 +55,12 @@ async function uploadFilesFromBtn() {
     </Card>
 
     <!-- Deux rectangles en bas -->
-    <div class="bg-black text-white p-4 grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-4xl mt-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mt-8 px-4">
       <!-- Rectangle Efficacité -->
-      <div class="bg-gray-900 p-4 rounded-lg flex items-center gap-3">
-        <Icon name="lucide:trending-up" class="h-8 w-8 text-orange-500" />
+      <div class="flex items-center gap-4 p-4 rounded-lg border border-white/20 bg-transparent">
+        <div class="size-16 rounded-full bg-gray-700 flex items-center justify-center">
+          <Icon name="lucide:shield-check" class="h-11 w-11 text-orange-500" />
+        </div>
         <div>
           <h3 class="font-bold text-lg">Efficacité</h3>
           <p class="text-sm opacity-80">Service rapide, précis et disponible à tout moment.</p>
@@ -66,8 +68,10 @@ async function uploadFilesFromBtn() {
       </div>
 
       <!-- Rectangle Performance -->
-      <div class="bg-gray-900 p-4 rounded-lg flex items-center gap-3">
-        <Icon name="lucide:zap" class="h-8 w-8 text-orange-500" />
+      <div class="flex items-center gap-4 p-4 rounded-lg border border-white/20 bg-transparent">
+        <div class="size-16 rounded-full bg-gray-700 flex items-center justify-center">
+          <Icon name="lucide:zap" class="h-11 w-11 text-orange-500" />
+        </div>
         <div>
           <h3 class="font-bold text-lg">Performance</h3>
           <p class="text-sm opacity-80">Système optimisé avec un déchiffrement instantané.</p>
