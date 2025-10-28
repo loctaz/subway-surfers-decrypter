@@ -16,14 +16,14 @@ async function uploadFilesFromBtn() {
     await uploadFiles();
   } catch (error) {
     console.error(error);
-    toast.error(error instanceof Error ? error.message : "Unknown error");
+    toast.error(error instanceof Error ? error.message : "Erreur inconnue");
   }
 }
 </script>
 
 <template>
   <div class="flex flex-col items-center justify-center min-h-[60vh] p-4 w-full">
-    <!-- Carte centrale existante -->
+    <!-- Carte centrale -->
     <Card class="w-full max-w-xl text-center">
       <CardHeader>
         <div class="mx-auto mb-2 size-14 rounded-full bg-primary/10 flex items-center justify-center">
@@ -55,9 +55,9 @@ async function uploadFilesFromBtn() {
     </Card>
 
     <!-- Deux rectangles en bas -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-4xl mt-8 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-2xl mt-8 px-4">
       <!-- Rectangle Efficacité -->
-      <Card class="w-full">
+      <Card class="w-full md:w-56">
         <CardContent class="flex items-center gap-4 p-4">
           <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center">
             <Icon name="lucide:shield-check" class="size-8 text-primary" />
@@ -72,7 +72,7 @@ async function uploadFilesFromBtn() {
       </Card>
 
       <!-- Rectangle Performance -->
-      <Card class="w-full">
+      <Card class="w-full md:w-56">
         <CardContent class="flex items-center gap-4 p-4">
           <div class="size-16 rounded-full bg-primary/10 flex items-center justify-center">
             <Icon name="lucide:zap" class="size-8 text-primary" />
@@ -90,5 +90,5 @@ async function uploadFilesFromBtn() {
 </template>
 
 <style>
-/* Si tu as besoin de styles personnalisés supplémentaires, ajoute-les ici */
+/* Ajoute ici des styles personnalisés si nécessaire */
 </style>
