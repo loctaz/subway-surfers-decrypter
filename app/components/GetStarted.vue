@@ -16,7 +16,7 @@ async function uploadFilesFromBtn() {
     await uploadFiles();
   } catch (error) {
     console.error(error);
-    toast.error(error instanceof Error ? error.message : "Unknown error");
+    toast.error(error instanceof Error ? error.message : "Erreur inconnue");
   }
 }
 </script>
