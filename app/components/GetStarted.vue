@@ -26,13 +26,14 @@ async function uploadFilesFromBtn() {
     <!-- Carte principale -->
     <Card class="w-full max-w-xl text-center">
       <CardHeader>
+        <!-- rond bleu/gris (dépendant du thème) -->
         <div
-          class="mx-auto mb-2 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center"
+          class="mx-auto mb-2 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20"
         >
           <Icon name="lucide:folder-open" class="w-8 h-8 text-primary" />
         </div>
-        <CardTitle>Commencer</CardTitle>
-        <CardDescription>
+        <CardTitle class="text-foreground">Commencer</CardTitle>
+        <CardDescription class="text-muted-foreground">
           Importez vos fichiers de profil Subway Surfers pour les consulter et les modifier.
           Vous pouvez sélectionner directement des fichiers JSON ou coller du contenu
           directement depuis votre presse-papiers. Vous pouvez aussi simplement copier le
@@ -50,22 +51,28 @@ async function uploadFilesFromBtn() {
             Coller depuis le presse-papiers
           </Button>
         </div>
-        <p class="mt-4 text-xs opacity-70">
+        <p class="mt-4 text-xs text-muted-foreground">
           <strong>Astuce :</strong> vous pouvez également glisser-déposer des fichiers .json
           n'importe où sur la page ou appuyer sur Ctrl/Cmd+V pour les coller.
         </p>
       </CardContent>
     </Card>
 
-    <!-- Deux rectangles du bas -->
+    <!-- Deux bannières du bas -->
     <div class="w-full max-w-5xl flex flex-col sm:flex-row gap-6 justify-between">
       <!-- Efficacité -->
-      <Card class="w-full sm:w-[48%] flex items-center gap-4 px-0 py-5 rounded-lg border border-border/40 bg-transparent">
-        <div class="w-14 h-14 rounded-full bg-[#1f1f1f] flex items-center justify-center shrink-0 border border-border/30 ml-6 mr-4">
-          <Icon name="lucide:shield-check" class="w-6 h-6 text-white/90" />
+      <Card
+        class="w-full sm:w-[48%] flex items-center gap-4 px-0 py-5 rounded-lg border border-border/40 bg-transparent"
+      >
+        <!-- logo collé à gauche + même couleur que le rond du haut -->
+        <div
+          class="ml-6 mr-4 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
+        >
+          <Icon name="lucide:shield-check" class="w-6 h-6 text-primary" />
         </div>
+
         <div class="flex-1 pr-6">
-          <p class="font-semibold text-white">Efficacité</p>
+          <p class="font-semibold text-foreground">Efficacité</p>
           <p class="text-sm text-muted-foreground mt-1">
             Service rapide, précis et disponible à tout moment.
           </p>
@@ -73,12 +80,18 @@ async function uploadFilesFromBtn() {
       </Card>
 
       <!-- Performance -->
-      <Card class="w-full sm:w-[48%] flex items-center gap-4 px-0 py-5 rounded-lg border border-border/40 bg-transparent">
-        <div class="w-14 h-14 rounded-full bg-[#1f1f1f] flex items-center justify-center shrink-0 border border-border/30 ml-6 mr-4">
-          <Icon name="lucide:zap" class="w-6 h-6 text-white/90" />
+      <Card
+        class="w-full sm:w-[48%] flex items-center gap-4 px-0 py-5 rounded-lg border border-border/40 bg-transparent"
+      >
+        <!-- logo collé à gauche + même couleur que le rond du haut -->
+        <div
+          class="ml-6 mr-4 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
+        >
+          <Icon name="lucide:zap" class="w-6 h-6 text-primary" />
         </div>
+
         <div class="flex-1 pr-6">
-          <p class="font-semibold text-white">Performance</p>
+          <p class="font-semibold text-foreground">Performance</p>
           <p class="text-sm text-muted-foreground mt-1">
             Système optimisé avec un déchiffrement instantané.
           </p>
