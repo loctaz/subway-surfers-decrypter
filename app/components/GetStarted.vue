@@ -26,7 +26,6 @@ async function uploadFilesFromBtn() {
     <!-- Carte principale -->
     <Card class="w-full max-w-xl text-center">
       <CardHeader>
-        <!-- rond bleu/gris (dépendant du thème) -->
         <div
           class="mx-auto mb-2 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20"
         >
@@ -59,43 +58,45 @@ async function uploadFilesFromBtn() {
     </Card>
 
     <!-- Deux bannières du bas -->
-    <div class="w-full max-w-5xl flex flex-col sm:flex-row gap-6 justify-between">
+    <div class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 gap-6">
       <!-- Efficacité -->
-      <Card
-        class="w-full sm:w-[48%] flex items-center gap-4 px-0 py-5 rounded-lg border border-border/40 bg-transparent"
-      >
-        <!-- logo collé à gauche + même couleur que le rond du haut -->
-        <div
-          class="ml-6 mr-4 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
-        >
-          <Icon name="lucide:shield-check" class="w-6 h-6 text-primary" />
-        </div>
-
-        <div class="flex-1 pr-6">
-          <p class="font-semibold text-foreground">Efficacité</p>
-          <p class="text-sm text-muted-foreground mt-1">
-            Service rapide, précis et disponible à tout moment.
-          </p>
-        </div>
+      <Card class="border border-border/40 bg-transparent rounded-lg">
+        <CardContent class="p-0">
+          <!-- >>> forcer layout horizontal -->
+          <div class="flex items-start gap-4 px-6 py-5">
+            <div
+              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
+            >
+              <Icon name="lucide:shield-check" class="w-6 h-6 text-primary" />
+            </div>
+            <div class="flex-1">
+              <p class="font-semibold text-foreground">Efficacité</p>
+              <p class="text-sm text-muted-foreground mt-1">
+                Service rapide, précis et disponible à tout moment.
+              </p>
+            </div>
+          </div>
+        </CardContent>
       </Card>
 
       <!-- Performance -->
-      <Card
-        class="w-full sm:w-[48%] flex items-center gap-4 px-0 py-5 rounded-lg border border-border/40 bg-transparent"
-      >
-        <!-- logo collé à gauche + même couleur que le rond du haut -->
-        <div
-          class="ml-6 mr-4 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
-        >
-          <Icon name="lucide:zap" class="w-6 h-6 text-primary" />
-        </div>
-
-        <div class="flex-1 pr-6">
-          <p class="font-semibold text-foreground">Performance</p>
-          <p class="text-sm text-muted-foreground mt-1">
-            Système optimisé avec un déchiffrement instantané.
-          </p>
-        </div>
+      <Card class="border border-border/40 bg-transparent rounded-lg">
+        <CardContent class="p-0">
+          <!-- >>> forcer layout horizontal -->
+          <div class="flex items-start gap-4 px-6 py-5">
+            <div
+              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
+            >
+              <Icon name="lucide:zap" class="w-6 h-6 text-primary" />
+            </div>
+            <div class="flex-1">
+              <p class="font-semibold text-foreground">Performance</p>
+              <p class="text-sm text-muted-foreground mt-1">
+                Système optimisé avec un déchiffrement instantané.
+              </p>
+            </div>
+          </div>
+        </CardContent>
       </Card>
     </div>
   </div>
