@@ -3,7 +3,7 @@
 
 /* Variantes */
 @custom-variant dark (&:is(.dark *));
-@custom-variant bleuté (&:is(.bleuté *));
+@custom-variant bleuter (&:is(.bleuter *));
 
 @theme inline {
   --color-background: var(--background);
@@ -192,7 +192,7 @@
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
-  .bleuté {
+  .bleuter {
     --sidebar-background: 220 14% 13%;
     --sidebar-foreground: 210 30% 92%;
     --sidebar-primary: 214 95% 64%;
