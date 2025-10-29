@@ -22,7 +22,7 @@ async function uploadFilesFromBtn() {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center min-h-[80vh] p-4 w-full space-y-6">
+  <div class="flex flex-col items-center justify-center min-h-[80vh] p-4 w-full space-y-8">
     <!-- Carte principale -->
     <Card class="w-full max-w-xl text-center">
       <CardHeader>
@@ -57,15 +57,15 @@ async function uploadFilesFromBtn() {
       </CardContent>
     </Card>
 
-    <!-- Deux rectangles du bas -->
-    <div class="flex flex-col sm:flex-row gap-4 w-full max-w-2xl justify-center">
+    <!-- Deux rectangles horizontaux du bas -->
+    <div class="flex flex-col sm:flex-row gap-5 w-full max-w-4xl justify-center">
       <!-- Efficacité -->
-      <Card class="flex-1 flex items-center gap-3 p-4 shadow-md border border-border/50">
-        <div class="size-10 rounded-full bg-muted flex items-center justify-center shrink-0">
-          <Icon name="lucide:shield-check" class="size-5 text-primary" />
+      <Card class="flex-1 flex items-center gap-4 px-6 py-5 shadow-md border border-border/50">
+        <div class="size-12 rounded-full bg-muted flex items-center justify-center shrink-0">
+          <Icon name="lucide:shield-check" class="size-6 text-primary" />
         </div>
-        <div class="text-left">
-          <p class="font-semibold">Efficacité</p>
+        <div class="flex flex-col text-left">
+          <p class="font-semibold text-base">Efficacité</p>
           <p class="text-sm text-muted-foreground">
             Service rapide, précis et disponible à tout moment.
           </p>
@@ -73,12 +73,12 @@ async function uploadFilesFromBtn() {
       </Card>
 
       <!-- Performance -->
-      <Card class="flex-1 flex items-center gap-3 p-4 shadow-md border border-border/50">
-        <div class="size-10 rounded-full bg-muted flex items-center justify-center shrink-0">
-          <Icon name="lucide:zap" class="size-5 text-primary" />
+      <Card class="flex-1 flex items-center gap-4 px-6 py-5 shadow-md border border-border/50">
+        <div class="size-12 rounded-full bg-muted flex items-center justify-center shrink-0">
+          <Icon name="lucide:zap" class="size-6 text-primary" />
         </div>
-        <div class="text-left">
-          <p class="font-semibold">Performance</p>
+        <div class="flex flex-col text-left">
+          <p class="font-semibold text-base">Performance</p>
           <p class="text-sm text-muted-foreground">
             Système optimisé avec un déchiffrement instantané.
           </p>
