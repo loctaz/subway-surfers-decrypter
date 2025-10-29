@@ -22,8 +22,8 @@ async function uploadFilesFromBtn() {
 </script>
 
 <template>
-  <div class="flex flex-col items-center justify-center min-h-[60vh] p-4 w-full">
-    <!-- Carte centrale -->
+  <div class="flex flex-col items-center justify-center min-h-[80vh] p-4 w-full space-y-6">
+    <!-- Carte principale -->
     <Card class="w-full max-w-xl text-center">
       <CardHeader>
         <div
@@ -57,44 +57,35 @@ async function uploadFilesFromBtn() {
       </CardContent>
     </Card>
 
-    <!-- Rectangles du bas -->
-    <div
-      class="flex flex-col md:flex-row items-center justify-center gap-4 w-full max-w-3xl mt-10"
-    >
+    <!-- Deux rectangles du bas -->
+    <div class="flex flex-col sm:flex-row gap-4 w-full max-w-2xl justify-center">
       <!-- Efficacité -->
-      <div
-        class="flex items-center gap-3 bg-primary/10 dark:bg-primary/20 text-foreground p-4 rounded-2xl shadow-sm w-full md:w-1/2 transition-all"
-      >
-        <Icon name="lucide:trending-up" class="h-8 w-8 text-primary" />
-        <div>
-          <h3 class="font-bold text-lg">Efficacité</h3>
-          <p class="text-sm opacity-80">
+      <Card class="flex-1 flex items-center gap-3 p-4 shadow-md border border-border/50">
+        <div class="size-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+          <Icon name="lucide:shield-check" class="size-5 text-primary" />
+        </div>
+        <div class="text-left">
+          <p class="font-semibold">Efficacité</p>
+          <p class="text-sm text-muted-foreground">
             Service rapide, précis et disponible à tout moment.
           </p>
         </div>
-      </div>
+      </Card>
 
       <!-- Performance -->
-      <div
-        class="flex items-center gap-3 bg-primary/10 dark:bg-primary/20 text-foreground p-4 rounded-2xl shadow-sm w-full md:w-1/2 transition-all"
-      >
-        <Icon name="lucide:zap" class="h-8 w-8 text-primary" />
-        <div>
-          <h3 class="font-bold text-lg">Performance</h3>
-          <p class="text-sm opacity-80">
+      <Card class="flex-1 flex items-center gap-3 p-4 shadow-md border border-border/50">
+        <div class="size-10 rounded-full bg-muted flex items-center justify-center shrink-0">
+          <Icon name="lucide:zap" class="size-5 text-primary" />
+        </div>
+        <div class="text-left">
+          <p class="font-semibold">Performance</p>
+          <p class="text-sm text-muted-foreground">
             Système optimisé avec un déchiffrement instantané.
           </p>
         </div>
-      </div>
+      </Card>
     </div>
   </div>
 </template>
 
-<style scoped>
-/* Optionnel : animation douce au survol */
-div.bg-primary\/10:hover,
-div.dark\:bg-primary\/20:hover {
-  transform: scale(1.02);
-  transition: transform 0.2s ease-in-out;
-}
-</style>
+<style></style>
