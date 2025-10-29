@@ -1,20 +1,13 @@
 <script lang="ts" setup>
 import { Button } from "@/components/ui/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import uploadFiles from "@/utils/uploadFile";
 import importFromPaste from "@/utils/importFromPaste";
 import { toast } from "vue-sonner";
 
 async function uploadFilesFromBtn() {
-  try {
-    await uploadFiles();
-  } catch (error) {
+  try { await uploadFiles(); }
+  catch (error) {
     console.error(error);
     toast.error(error instanceof Error ? error.message : "Erreur inconnue");
   }
@@ -26,9 +19,7 @@ async function uploadFilesFromBtn() {
     <!-- Carte principale -->
     <Card class="w-full max-w-xl text-center">
       <CardHeader>
-        <div
-          class="mx-auto mb-2 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20"
-        >
+        <div class="mx-auto mb-2 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20">
           <Icon name="lucide:folder-open" class="w-8 h-8 text-primary" />
         </div>
         <CardTitle class="text-foreground">Commencer</CardTitle>
@@ -57,20 +48,20 @@ async function uploadFilesFromBtn() {
       </CardContent>
     </Card>
 
-    <!-- Deux bannières du bas (plus compactes) -->
-    <div class="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center">
+    <!-- Bannières du bas : LONGUES mais PEU HAUTES -->
+    <!-- Ajuste la longueur ici: max-w-4xl (peut passer à 5xl si tu veux encore plus long) -->
+    <div class="w-full max-w-4xl grid grid-cols-1 sm:grid-cols-2 gap-6">
       <!-- Efficacité -->
-      <Card class="border border-border/40 bg-transparent rounded-lg">
+      <Card class="border border-border/40 bg-transparent rounded-xl">
         <CardContent class="p-0">
-          <div class="flex items-start gap-4 px-6 py-5">
-            <div
-              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
-            >
-              <Icon name="lucide:shield-check" class="w-6 h-6 text-primary" />
+          <!-- Hauteur réduite: h-16 (~64px). Ajuste à h-[68px] si besoin. -->
+          <div class="flex items-center gap-4 px-5 h-16">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0">
+              <Icon name="lucide:shield-check" class="w-5 h-5 text-primary" />
             </div>
             <div class="flex-1">
-              <p class="font-semibold text-foreground">Efficacité</p>
-              <p class="text-sm text-muted-foreground mt-1">
+              <p class="font-semibold leading-tight text-foreground">Efficacité</p>
+              <p class="text-sm leading-tight text-muted-foreground">
                 Service rapide, précis et disponible à tout moment.
               </p>
             </div>
@@ -79,17 +70,15 @@ async function uploadFilesFromBtn() {
       </Card>
 
       <!-- Performance -->
-      <Card class="border border-border/40 bg-transparent rounded-lg">
+      <Card class="border border-border/40 bg-transparent rounded-xl">
         <CardContent class="p-0">
-          <div class="flex items-start gap-4 px-6 py-5">
-            <div
-              class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
-            >
-              <Icon name="lucide:zap" class="w-6 h-6 text-primary" />
+          <div class="flex items-center gap-4 px-5 h-16">
+            <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0">
+              <Icon name="lucide:zap" class="w-5 h-5 text-primary" />
             </div>
             <div class="flex-1">
-              <p class="font-semibold text-foreground">Performance</p>
-              <p class="text-sm text-muted-foreground mt-1">
+              <p class="font-semibold leading-tight text-foreground">Performance</p>
+              <p class="text-sm leading-tight text-muted-foreground">
                 Système optimisé avec un déchiffrement instantané.
               </p>
             </div>
