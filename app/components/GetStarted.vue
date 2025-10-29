@@ -57,12 +57,11 @@ async function uploadFilesFromBtn() {
       </CardContent>
     </Card>
 
-    <!-- Deux bannières du bas -->
-    <div class="w-full max-w-5xl grid grid-cols-1 sm:grid-cols-2 gap-6">
+    <!-- Deux bannières du bas (plus compactes) -->
+    <div class="w-full max-w-3xl grid grid-cols-1 sm:grid-cols-2 gap-6 justify-center">
       <!-- Efficacité -->
       <Card class="border border-border/40 bg-transparent rounded-lg">
         <CardContent class="p-0">
-          <!-- >>> forcer layout horizontal -->
           <div class="flex items-start gap-4 px-6 py-5">
             <div
               class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
@@ -82,7 +81,6 @@ async function uploadFilesFromBtn() {
       <!-- Performance -->
       <Card class="border border-border/40 bg-transparent rounded-lg">
         <CardContent class="p-0">
-          <!-- >>> forcer layout horizontal -->
           <div class="flex items-start gap-4 px-6 py-5">
             <div
               class="w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center ring-1 ring-primary/20 shrink-0"
