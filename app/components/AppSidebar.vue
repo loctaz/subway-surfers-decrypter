@@ -162,7 +162,7 @@ const siteUrl = useRequestURL().origin;
 
       <Separator />
 
-<DropdownMenu>
+      <DropdownMenu>
   <DropdownMenuTrigger as-child>
     <SidebarMenuButton>
       <Icon name="lucide:monitor" /> Thème
