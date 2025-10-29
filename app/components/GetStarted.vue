@@ -27,9 +27,9 @@ async function uploadFilesFromBtn() {
     <Card class="w-full max-w-xl text-center">
       <CardHeader>
         <div
-          class="mx-auto mb-2 size-14 rounded-full bg-primary/10 flex items-center justify-center"
+          class="mx-auto mb-2 w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center"
         >
-          <Icon name="lucide:folder-open" class="size-8 text-primary" />
+          <Icon name="lucide:folder-open" class="w-8 h-8 text-primary" />
         </div>
         <CardTitle>Commencer</CardTitle>
         <CardDescription>
@@ -57,29 +57,29 @@ async function uploadFilesFromBtn() {
       </CardContent>
     </Card>
 
-    <!-- Deux rectangles horizontaux du bas -->
-    <div class="flex flex-col sm:flex-row gap-5 w-full max-w-4xl justify-center">
+    <!-- Deux rectangles du bas -->
+    <div class="w-full max-w-5xl flex flex-col sm:flex-row gap-6 justify-between">
       <!-- Efficacité -->
-      <Card class="flex-1 flex items-center gap-4 px-6 py-5 shadow-md border border-border/50">
-        <div class="size-12 rounded-full bg-muted flex items-center justify-center shrink-0">
-          <Icon name="lucide:shield-check" class="size-6 text-primary" />
+      <Card class="w-full sm:w-[48%] flex items-center gap-4 px-6 py-5 rounded-lg border border-border/40 bg-transparent">
+        <div class="w-10 h-10 rounded-full bg-[#1f1f1f] flex items-center justify-center shrink-0 border border-border/30">
+          <Icon name="lucide:shield-check" class="w-5 h-5 text-white/90" />
         </div>
-        <div class="flex flex-col text-left">
-          <p class="font-semibold text-base">Efficacité</p>
-          <p class="text-sm text-muted-foreground">
+        <div class="flex-1">
+          <p class="font-semibold text-white">Efficacité</p>
+          <p class="text-sm text-muted-foreground mt-1">
             Service rapide, précis et disponible à tout moment.
           </p>
         </div>
       </Card>
 
       <!-- Performance -->
-      <Card class="flex-1 flex items-center gap-4 px-6 py-5 shadow-md border border-border/50">
-        <div class="size-12 rounded-full bg-muted flex items-center justify-center shrink-0">
-          <Icon name="lucide:zap" class="size-6 text-primary" />
+      <Card class="w-full sm:w-[48%] flex items-center gap-4 px-6 py-5 rounded-lg border border-border/40 bg-transparent">
+        <div class="w-10 h-10 rounded-full bg-[#1f1f1f] flex items-center justify-center shrink-0 border border-border/30">
+          <Icon name="lucide:zap" class="w-5 h-5 text-white/90" />
         </div>
-        <div class="flex flex-col text-left">
-          <p class="font-semibold text-base">Performance</p>
-          <p class="text-sm text-muted-foreground">
+        <div class="flex-1">
+          <p class="font-semibold text-white">Performance</p>
+          <p class="text-sm text-muted-foreground mt-1">
             Système optimisé avec un déchiffrement instantané.
           </p>
         </div>
@@ -87,5 +87,3 @@ async function uploadFilesFromBtn() {
     </div>
   </div>
 </template>
-
-<style></style>
