@@ -60,11 +60,11 @@ async function uploadFilesFromBtn() {
     <!-- Deux rectangles du bas -->
     <div class="w-full max-w-5xl flex flex-col sm:flex-row gap-6 justify-between">
       <!-- Efficacité -->
-      <Card class="w-full sm:w-[48%] flex items-center gap-4 px-6 py-5 rounded-lg border border-border/40 bg-transparent">
-        <div class="w-10 h-10 rounded-full bg-[#1f1f1f] flex items-center justify-center shrink-0 border border-border/30">
-          <Icon name="lucide:shield-check" class="w-5 h-5 text-white/90" />
+      <Card class="w-full sm:w-[48%] flex items-center gap-4 px-0 py-5 rounded-lg border border-border/40 bg-transparent">
+        <div class="w-14 h-14 rounded-full bg-[#1f1f1f] flex items-center justify-center shrink-0 border border-border/30 ml-6 mr-4">
+          <Icon name="lucide:shield-check" class="w-6 h-6 text-white/90" />
         </div>
-        <div class="flex-1">
+        <div class="flex-1 pr-6">
           <p class="font-semibold text-white">Efficacité</p>
           <p class="text-sm text-muted-foreground mt-1">
             Service rapide, précis et disponible à tout moment.
@@ -73,11 +73,11 @@ async function uploadFilesFromBtn() {
       </Card>
 
       <!-- Performance -->
-      <Card class="w-full sm:w-[48%] flex items-center gap-4 px-6 py-5 rounded-lg border border-border/40 bg-transparent">
-        <div class="w-10 h-10 rounded-full bg-[#1f1f1f] flex items-center justify-center shrink-0 border border-border/30">
-          <Icon name="lucide:zap" class="w-5 h-5 text-white/90" />
+      <Card class="w-full sm:w-[48%] flex items-center gap-4 px-0 py-5 rounded-lg border border-border/40 bg-transparent">
+        <div class="w-14 h-14 rounded-full bg-[#1f1f1f] flex items-center justify-center shrink-0 border border-border/30 ml-6 mr-4">
+          <Icon name="lucide:zap" class="w-6 h-6 text-white/90" />
         </div>
-        <div class="flex-1">
+        <div class="flex-1 pr-6">
           <p class="font-semibold text-white">Performance</p>
           <p class="text-sm text-muted-foreground mt-1">
             Système optimisé avec un déchiffrement instantané.
