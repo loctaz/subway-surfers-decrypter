@@ -178,8 +178,8 @@ const siteUrl = useRequestURL().origin;
       <Icon name="lucide:moon" /> Sombre
     </DropdownMenuItem>
 
-    <DropdownMenuItem @click="setTheme('bleuté')">
-      <Icon name="lucide:palette" /> Bleuté
+    <DropdownMenuItem @click="setTheme('bleuter')">
+      <Icon name="lucide:palette" /> Bleuter
     </DropdownMenuItem>
 
     <DropdownMenuItem @click="setTheme('system')">
