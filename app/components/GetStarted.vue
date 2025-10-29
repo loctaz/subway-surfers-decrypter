@@ -25,8 +25,8 @@ async function uploadFilesFromBtn() {
         <CardTitle class="text-foreground">Commencer</CardTitle>
         <CardDescription class="text-muted-foreground">
           Importez vos fichiers de profil Subway Surfers pour les consulter et les modifier.
-          Vous pouvez sélectionner directement des fichiers JSON ou coller du contenu
-          directement depuis votre presse-papiers. Vous pouvez aussi simplement copier le
+          Vous pouvez sélectionner des fichiers JSON ou coller du contenu
+          depuis votre presse-papiers. Vous pouvez aussi simplement copier le
           <strong>texte</strong> du fichier.
         </CardDescription>
       </CardHeader>
