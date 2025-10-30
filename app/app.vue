@@ -29,9 +29,9 @@ onMounted(() => {
         </AlertDialogDescription>
       </AlertDialogHeader>
       <AlertDialogFooter>
-        <AlertDialogCancel>Cancel</AlertDialogCancel>
+        <AlertDialogCancel>Annuler</AlertDialogCancel>
         <AlertDialogAction @click="$pwa?.updateServiceWorker()"
-          >Update</AlertDialogAction
+          >Mise à jour</AlertDialogAction
         >
       </AlertDialogFooter>
     </AlertDialogContent>
