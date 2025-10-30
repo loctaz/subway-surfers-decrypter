@@ -27,7 +27,7 @@ export const useGlobalPaste = () => {
         } catch (err) {
           console.error(err);
           toast.error(
-            err instanceof Error ? err.message : "Failed to import pasted file"
+            err instanceof Error ? err.message : "Échec de l'importation du fichier collé"
           );
         }
       }
