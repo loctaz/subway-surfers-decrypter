@@ -52,13 +52,13 @@ export const useGlobalDrop = () => {
           await filesStore.addFile(content, file.name);
         } catch (error) {
           console.error(error);
-          toast.error(error instanceof Error ? error.message : "Unknown error");
+          toast.error(error instanceof Error ? error.message : "Erreur inconnue");
         }
       };
 
       reader.onerror = () => {
         console.error(reader.error);
-        toast.error(reader.error?.message ?? "Failed to read file");
+        toast.error(reader.error?.message ?? "Impossible de lire le fichier");
       };
 
       try {
@@ -68,7 +68,7 @@ export const useGlobalDrop = () => {
         toast.error(
           error instanceof Error
             ? error.message
-            : "Failed to start reading file"
+            : "Échec du démarrage de la lecture du fichier"
         );
       }
     }
