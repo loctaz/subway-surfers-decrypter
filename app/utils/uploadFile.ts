@@ -52,7 +52,7 @@ export default function uploadFiles(): Promise<void> {
               };
 
               reader.onerror = () => {
-                safeReject(reader.error ?? new Error("Failed to read file"));
+                safeReject(reader.error ?? new Error("Échec de la lecture du fichier"));
               };
 
               reader.readAsText(file);
