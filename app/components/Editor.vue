@@ -12,7 +12,7 @@ function restore() {
   filesStore.files[filesStore.selectedIndex!]!.data =
     filesStore.files[filesStore.selectedIndex!]!.originalData;
   showRestoreModal.value = false;
-  toast.success("File restored to original state");
+  toast.success("Fichier restauré à son état d'origine");
 }
 </script>
 
