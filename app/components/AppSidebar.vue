@@ -130,7 +130,7 @@ const siteUrl = useRequestURL().origin;
 
       <NuxtLink
         class="flex items-center gap-2 min-w-0 hover:bg-sidebar-accent px-2 py-1 rounded-md"
-        to="https://github.com/HerrErde/Subway Booster"
+        to="https://github.com/HerrErde/SubwayBooster"
         :external="true"
         target="_blank"
       >
