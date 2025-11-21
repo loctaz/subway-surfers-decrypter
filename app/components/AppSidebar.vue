@@ -29,7 +29,7 @@ const siteUrl = useRequestURL().origin;
   <Sidebar v-bind="props">
     <SidebarHeader>
       <div class="px-2 py-1 text-sm font-semibold flex items-center gap-1">
-        Décrypteur Subway Surfers
+        Décrypteur Synapsia
         <Icon name="lucide:lock-keyhole-open" class="h-3 w-3 flex-shrink-0" />
       </div>
       <!-- 🌐 Lien principal -->
