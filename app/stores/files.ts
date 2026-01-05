@@ -21,7 +21,7 @@ export const useFilesStore = defineStore("filesStore", {
       if (content.startsWith("{")) {
         // It is a json file with {version: number, data: Record<string, any>}
         const json = JSON.parse(content);
-        const jsonData = await TextCipher.decrypt(json.data);
+        const jsonData = await getJsonData(json.data);
         const parsedJsonData = JSON.parse(jsonData);
 
         this.files.push({
@@ -33,7 +33,7 @@ export const useFilesStore = defineStore("filesStore", {
           rawInput: content,
         });
       } else {
-        throw new Error("Contenu du fichier invalide");
+        throw new Error("Invalid file content");
       }
 
       this.reorderFilesAlphabetically();
