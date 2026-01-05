@@ -33,7 +33,7 @@ export default async function importFromPaste(): Promise<void> {
       }
     } catch (e) {
       toast.error(
-        e instanceof Error ? e.message : "Le texte du presse-papiers n'est pas au format JSON valide"
+        e instanceof Error ? e.message : "Le texte dans le presse-papiers n'est pas un JSON valide"
       );
     }
   } catch (error) {
@@ -69,7 +69,7 @@ async function importTextAsFile(
     // Determine a filename from decrypted data if possible
     let name = "unknown.json";
     try {
-      const decrypted = await TextCipher.decrypt(wrapper.data);
+      const decrypted = await getJsonData(wrapper.data);
       const decryptedObj = JSON.parse(decrypted);
       name = detectFromContent(decryptedObj) || name;
     } catch {
