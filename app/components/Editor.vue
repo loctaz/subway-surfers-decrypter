@@ -12,7 +12,7 @@ function restore() {
   filesStore.files[filesStore.selectedIndex!]!.data =
     filesStore.files[filesStore.selectedIndex!]!.originalData;
   showRestoreModal.value = false;
-  toast.success("File restored to original state");
+  toast.success("Fichier restauré à son état d'origine");
 }
 </script>
 
@@ -26,7 +26,7 @@ function restore() {
         >
           <Button
             variant="outline"
-            class="w-full md:w-auto"
+            class="w-full md:w-auto cursor-pointer"
             @click="exportModal.showModal(filesStore.selectedIndex!)"
           >
             <Icon name="lucide:download" />
@@ -34,7 +34,7 @@ function restore() {
           </Button>
           <Button
             variant="secondary"
-            class="w-full md:w-auto"
+            class="w-full md:w-auto cursor-pointer"
             @click="showRestoreModal = true"
           >
             <Icon name="lucide:refresh-cw" />
@@ -43,8 +43,16 @@ function restore() {
         </div>
 
         <TabsList class="w-full md:max-w-[400px]">
-          <TabsTrigger value="quick_edit"> Modification rapide </TabsTrigger>
-          <TabsTrigger value="raw_edit"> Modification brut </TabsTrigger>
+          <!-- Modification rapide avec icône chevrons-up -->
+          <TabsTrigger value="quick_edit" class="cursor-pointer">
+            <Icon name="lucide:chevrons-up" class="mr-1 h-4 w-4" />
+            Modification rapide
+          </TabsTrigger>
+          <!-- Modification brut avec icône braces -->
+          <TabsTrigger value="raw_edit" class="cursor-pointer">
+            <Icon name="lucide:braces" class="mr-1 h-4 w-4" />
+            Modification brut
+          </TabsTrigger>
         </TabsList>
       </div>
 
@@ -61,7 +69,7 @@ function restore() {
         <DialogHeader>
           <DialogTitle>Restaurez le fichier à son état d'origine</DialogTitle>
           <DialogDescription>
-            Restaurez le fichier à son état d'origine ? Vous perdrez toutes vos modifications.
+            Restaurez le fichier à son état d'origine ? Vous perdrez toutes vos modifications
           </DialogDescription>
         </DialogHeader>
 
