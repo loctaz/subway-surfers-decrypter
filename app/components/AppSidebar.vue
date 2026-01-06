@@ -32,7 +32,7 @@ const siteUrl = useRequestURL().origin;
         Décrypteur Synapsia
         <Icon name="lucide:lock-keyhole-open" class="h-3 w-3 flex-shrink-0" />
       </div>
-      <!-- 🌐 Lien principal -->
+      <!-- Lien principal -->
       <span
         :to="siteUrl"
         :external="true"
@@ -44,31 +44,36 @@ const siteUrl = useRequestURL().origin;
         <span class="truncate">{{ siteUrl }}</span>
       </span>
 
-<!-- 💖 Traduit par Loctaz -->
-<div class="flex items-center gap-1 px-2 text-xs opacity-70 min-w-0">
-  <Icon name="lucide:heart" class="h-3 w-3 flex-shrink-0" />
-  <span class="truncate">Loctaz - Contribution</span>
-</div>
+      <!-- Traduit par Loctaz -->
+      <div class="flex items-center gap-1 px-2 text-xs opacity-70 min-w-0">
+        <Icon name="lucide:heart" class="h-3 w-3 flex-shrink-0" />
+        <span class="truncate">Loctaz - Contribution</span>
+      </div>
 
-<!-- 🐙 Crédit à Leo -->
-<div class="flex items-center gap-1 px-2 text-xs opacity-70 min-w-0">
-  <Icon name="lucide:copyright" class="h-3 w-3 flex-shrink-0" />
-  <span class="truncate">Leo - Crédit accordé</span>
-</div>
+      <!-- Crédit à Leo -->
+      <div class="flex items-center gap-1 px-2 text-xs opacity-70 min-w-0">
+        <Icon name="lucide:copyright" class="h-3 w-3 flex-shrink-0" />
+        <span class="truncate">Leo - Crédit accordé</span>
+      </div>
     </SidebarHeader>
 
     <SidebarContent>
       <SidebarGroup>
         <SidebarGroupLabel>Actions</SidebarGroupLabel>
         <SidebarGroupContent>
-          <SidebarMenuButton @click="uploadFilesFromBtn">
+          <!-- Bouton Télécharger -->
+          <SidebarMenuButton
+            @click="uploadFilesFromBtn"
+            class="cursor-pointer"
+          >
             <Icon name="lucide:upload" class="h-4 w-4 flex-shrink-0" />
             Télécharger le(s) fichier(s)
           </SidebarMenuButton>
 
+          <!-- Bouton Coller -->
           <SidebarMenuButton
             @click="importFromPaste"
-            class="whitespace-nowrap"
+            class="whitespace-nowrap cursor-pointer"
           >
             <Icon name="lucide:clipboard" class="h-4 w-4 flex-shrink-0" />
             Coller depuis le presse-papiers
@@ -162,22 +167,23 @@ const siteUrl = useRequestURL().origin;
 
       <Separator />
 
+      <!-- Bouton Thème -->
       <DropdownMenu>
-        <DropdownMenuTrigger as-child
-          ><SidebarMenuButton
-            ><Icon name="lucide:monitor" /> Thème</SidebarMenuButton
-          ></DropdownMenuTrigger
-        >
+        <DropdownMenuTrigger as-child>
+          <SidebarMenuButton class="cursor-pointer">
+            <Icon name="lucide:monitor" /> Thème
+          </SidebarMenuButton>
+        </DropdownMenuTrigger>
         <DropdownMenuContent>
-          <DropdownMenuItem @click="colorMode.preference = 'light'"
-            ><Icon name="lucide:sun" /> Lumière</DropdownMenuItem
-          >
-          <DropdownMenuItem @click="colorMode.preference = 'dark'"
-            ><Icon name="lucide:moon" /> Sombre</DropdownMenuItem
-          >
-          <DropdownMenuItem @click="colorMode.preference = 'system'"
-            ><Icon name="lucide:monitor" /> Système</DropdownMenuItem
-          >
+          <DropdownMenuItem @click="colorMode.preference = 'light'">
+            <Icon name="lucide:sun" /> Lumière
+          </DropdownMenuItem>
+          <DropdownMenuItem @click="colorMode.preference = 'dark'">
+            <Icon name="lucide:moon" /> Sombre
+          </DropdownMenuItem>
+          <DropdownMenuItem @click="colorMode.preference = 'system'">
+            <Icon name="lucide:monitor" /> Système
+          </DropdownMenuItem>
         </DropdownMenuContent>
       </DropdownMenu>
     </SidebarFooter>
