@@ -8,10 +8,22 @@ import importFromPaste from "~/utils/importFromPaste";
 const filesStore = useFilesStore();
 const exportModal = useExportModal();
 const colorMode = useColorMode();
+const router = useRouter();
+const route = useRoute(); // Pour vérifier la route actuelle
 
 const props = withDefaults(defineProps<SidebarProps>(), {
   variant: "inset",
 });
+
+// État pour gérer l'icône (open/closed)
+const isHomePage = computed(() => route.path === '/getstarted');
+
+// Fonction pour rediriger vers la page principale
+function goToHome() {
+  if (!isHomePage.value) {
+    router.push({ path: '/getstarted' });
+  }
+}
 
 async function uploadFilesFromBtn() {
   try {
@@ -28,10 +40,18 @@ const siteUrl = useRequestURL().origin;
 <template>
   <Sidebar v-bind="props">
     <SidebarHeader>
-      <div class="px-2 py-1 text-sm font-semibold flex items-center gap-1">
+      <!-- Icône dynamique + curseur main + redirection -->
+      <div
+        @click="goToHome"
+        class="px-2 py-1 text-sm font-semibold flex items-center gap-1 cursor-pointer"
+      >
         Décrypteur Synapsia
-        <Icon name="lucide:lock-keyhole-open" class="h-3 w-3 flex-shrink-0" />
+        <Icon
+          :name="isHomePage ? 'lucide:lock-keyhole' : 'lucide:lock-keyhole-open'"
+          class="h-3 w-3 flex-shrink-0"
+        />
       </div>
+
       <!-- Lien principal -->
       <span
         :to="siteUrl"
